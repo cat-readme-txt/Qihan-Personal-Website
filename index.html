@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta
+      name="description"
+      content="Blake (Qihan) Wang — Electrical Engineering at UIUC. Research in EEG signal processing, GPU computing, and hardware–software systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Blake Wang / Qihan Wang — Electrical Engineering"
+    />
+    <meta
+      property="og:description"
+      content="Electrical Engineering at UIUC. Selected research, projects, and technical interests."
+    />
+    <meta
+      property="og:url"
+      content="https://cat-readme-txt.github.io/Personal-Website/"
+    />
+    <title>Blake Wang / Qihan Wang</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#home" class="wordmark" aria-label="Blake Wang, home"
+          >bw<span>.</span></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">+</span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="#home" aria-current="location">Home</a>
+          <a href="#research">Research</a>
+          <a href="#projects">Projects</a>
+          <a href="#interests">Technical Interests</a>
+          <a href="#experience">Experience</a>
+        </nav>
+        <a
+          class="header-portfolio text-link"
+          href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Art &amp; design
+          <svg class="icon" aria-hidden="true">
+            <use href="#arrow-up-right" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section
+        id="home"
+        class="home section-width"
+        aria-labelledby="home-title"
+      >
+        <div class="home-intro">
+          <p class="eyebrow">
+            <span class="small-cross" aria-hidden="true">+</span> Electrical
+            Engineering @ UIUC
+          </p>
+          <h1 id="home-title">
+            Blake Wang<span class="alternate-name">/ Qihan Wang</span>
+          </h1>
+          <p class="home-focus">
+            Electrical Engineering student interested in computer architecture,
+            GPU computing, hardware–software systems, signal processing, and
+            intelligent systems.
+          </p>
+          <div class="home-actions">
+            <a
+              class="button button-primary"
+              href="./assets/qihan-wang-resume.pdf"
+              target="_blank"
+              rel="noopener"
+              >Resume
+              <svg class="icon" aria-hidden="true"><use href="#download" /></svg
+            ></a>
+            <a
+              class="button button-outline"
+              href="https://github.com/cat-readme-txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub
+              <svg class="icon" aria-hidden="true">
+                <use href="#arrow-up-right" /></svg
+            ></a>
+            <a
+              class="button button-outline"
+              href="mailto:cat.readme.txt@gmail.com"
+              >Email
+              <svg class="icon" aria-hidden="true">
+                <use href="#arrow-up-right" /></svg
+            ></a>
+          </div>
+        </div>
+        <aside class="current-work" aria-labelledby="current-heading">
+          <h2 class="eyebrow" id="current-heading">
+            <span class="status-dot" aria-hidden="true"></span> On my desk
+          </h2>
+          <div class="highlight">
+            <span class="highlight-number" aria-hidden="true">01</span>
+            <div>
+              <p class="micro-label">Research exploration</p>
+              <h3>Nuclear pasta on GPUs</h3>
+              <p>
+                Planning simulations of dense nuclear matter, with a focus on
+                accuracy and performance.
+              </p>
+            </div>
+          </div>
+          <a class="highlight highlight-link" href="#projects">
+            <span class="highlight-number" aria-hidden="true">02</span>
+            <div>
+              <p class="micro-label">Independent project</p>
+              <h3>
+                Chronodox
+                <svg class="icon" aria-hidden="true">
+                  <use href="#arrow-right" />
+                </svg>
+              </h3>
+              <p>
+                A strategy game across three timelines, with a custom engine and
+                self-play AI.
+              </p>
+            </div>
+          </a>
+          <a class="highlight highlight-link" href="#research">
+            <span class="highlight-number" aria-hidden="true">03</span>
+            <div>
+              <p class="micro-label">Independent research</p>
+              <h3>
+                Decoding EEG signals
+                <svg class="icon" aria-hidden="true">
+                  <use href="#arrow-right" />
+                </svg>
+              </h3>
+              <p>
+                Studying motor classification under practical sensing and
+                computing constraints.
+              </p>
+            </div>
+          </a>
+        </aside>
+      </section>
+
+      <section
+        id="research"
+        class="section section-width"
+        aria-labelledby="research-heading"
+      >
+        <div class="section-heading">
+          <h2 id="research-heading">
+            <span class="section-number">01 /</span> Research
+          </h2>
+          <span class="section-note">Signals → understanding</span>
+        </div>
+        <article class="research-project">
+          <div class="research-title-row">
+            <div>
+              <p class="eyebrow">Independent research · Researcher · 2026</p>
+              <h3>Resource-constrained<br />EEG motor classification</h3>
+            </div>
+            <a
+              class="text-link"
+              href="https://github.com/cat-readme-txt/EEG-Analysis"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View repository
+              <svg class="icon" aria-hidden="true">
+                <use href="#arrow-up-right" /></svg
+            ></a>
+          </div>
+          <p class="research-lede">
+            How well can lightweight classifiers distinguish left- and
+            right-fist movement—and imagined movement—in people they haven’t
+            seen before?
+          </p>
+          <div class="research-grid">
+            <div class="research-copy">
+              <div class="detail-block">
+                <h4>Why it matters</h4>
+                <p>
+                  Brain–computer interfaces must work within real constraints:
+                  fewer electrodes, shorter decision windows, limited
+                  calibration, and noisy signals. Accuracy is only part of the
+                  problem.
+                </p>
+              </div>
+              <div class="detail-block">
+                <h4>What I did</h4>
+                <p>
+                  I designed and implemented the benchmark, built the EEG
+                  preprocessing pipeline, ran the statistical analyses, and
+                  prepared the visualizations and manuscript.
+                </p>
+              </div>
+              <div class="detail-block">
+                <h4>Technical methods</h4>
+                <p>
+                  Band power, Hjorth parameters, wavelet energy, common spatial
+                  patterns (CSP), and filter-bank CSP, paired with shrinkage
+                  linear discriminant analysis. Leave-one-subject-out evaluation
+                  measures transfer to unseen participants; further experiments
+                  test calibration, channel reduction, short windows, and
+                  simulated artifacts.
+                </p>
+              </div>
+              <div class="tools-line">
+                <span class="micro-label">Tools &amp; languages</span>
+                <p>
+                  Python · MNE · NumPy · pandas · SciPy · scikit-learn ·
+                  PyWavelets · Matplotlib · Jupyter
+                </p>
+              </div>
+            </div>
+            <div class="research-evidence">
+              <div class="research-stats" aria-label="Benchmark scope">
+                <div><strong>109</strong><span>participants</span></div>
+                <div><strong>5</strong><span>feature methods</span></div>
+                <div><strong>16</strong><span>scenarios</span></div>
+              </div>
+              <figure class="research-figure">
+                <a
+                  href="./assets/eeg-channel-reduction.png"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Open full-size EEG channel reduction figure"
+                  ><img
+                    src="./assets/eeg-channel-reduction.png"
+                    alt="EEG benchmark plotting the best mean leave-one-subject-out accuracy against electrode count for movement and imagery. The 64-channel results exceed 62 percent; a dashed line marks 50 percent chance accuracy."
+                    width="1580"
+                    height="940"
+                    loading="lazy"
+                /></a>
+                <figcaption>
+                  <span class="figure-number">Fig. 01</span> Channel-count
+                  benchmark. Best mean accuracy across evaluated pipelines; the
+                  dashed line marks chance (50%).
+                  <span class="figure-hint">Select to enlarge ↗</span>
+                </figcaption>
+              </figure>
+              <div class="research-status">
+                <span class="status-dot" aria-hidden="true"></span>
+                <p>
+                  <strong>Analysis complete · Manuscript drafted</strong
+                  ><span
+                    >Offline benchmark; prepared for faculty feedback.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section
+        id="projects"
+        class="section projects-section"
+        aria-labelledby="projects-heading"
+      >
+        <div class="section-width">
+          <div class="section-heading">
+            <h2 id="projects-heading">
+              <span class="section-number">02 /</span> Projects
+            </h2>
+            <span class="section-note">Ideas → working systems</span>
+          </div>
+          <article class="chronodox-project">
+            <div class="project-main">
+              <p class="eyebrow">Strategy simulation · 2026</p>
+              <h3>Chronodox<span class="title-period">.</span></h3>
+              <p class="project-tagline">
+                Three timelines.<br />Every decision echoes.
+              </p>
+              <p class="project-description">
+                A browser-based strategy game about agents competing across the
+                past, present, and future. I built a custom TypeScript engine
+                for hidden information, timeline traversal, an intel economy,
+                and paradoxes that can destroy cities and agents.
+              </p>
+              <p class="project-attribution">
+                Inspired by the iOS game <em>Two Spies</em>, then expanded with
+                paradox mechanics and layered timelines.
+              </p>
+              <div class="project-links">
+                <a
+                  class="button button-light"
+                  href="https://cat-readme-txt.github.io/Chronodox/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Play Chronodox
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#arrow-up-right" /></svg></a
+                ><a
+                  class="text-link"
+                  href="https://github.com/cat-readme-txt/Chronodox"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Source code
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#arrow-up-right" /></svg
+                ></a>
+              </div>
+            </div>
+            <figure class="timeline-figure">
+              <img
+                src="./assets/chronodox-timelines.svg"
+                alt="Conceptual diagram of Chronodox: connected city networks in the past, present, and future, with paths linking the three timelines."
+                width="640"
+                height="470"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>CHRONODOX / SYSTEM STUDY</span
+                ><span>PAST · PRESENT · FUTURE</span>
+              </figcaption>
+            </figure>
+            <div class="project-features">
+              <div>
+                <span class="feature-number">01</span>
+                <h4>One shared engine</h4>
+                <p>
+                  Procedural maps, cross-timeline movement, and paradox
+                  resolution power both playable matches and AI self-play.
+                </p>
+              </div>
+              <div>
+                <span class="feature-number">02</span>
+                <h4>Learning through self-play</h4>
+                <p>
+                  A hybrid agent blends tactical heuristics with learned linear
+                  scores. An offline pipeline generates the browser’s policy
+                  artifacts.
+                </p>
+              </div>
+              <div>
+                <span class="feature-number">03</span>
+                <h4>From rules to interaction</h4>
+                <p>
+                  Animated timeline views, a command terminal, and an optional
+                  Node.js host for multiplayer synchronization.
+                </p>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="micro-label">Built with</span>
+              <p>
+                TypeScript / React / Zustand / Vite / Node.js / Tailwind CSS /
+                Framer Motion
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/cat-readme-txt/Chronodox/blob/main/docs/technical-overview.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Technical notes
+                <svg class="icon" aria-hidden="true">
+                  <use href="#arrow-up-right" /></svg
+              ></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="interests"
+        class="section section-width"
+        aria-labelledby="interests-heading"
+      >
+        <div class="section-heading">
+          <h2 id="interests-heading">
+            <span class="section-number">03 /</span> Technical Interests
+          </h2>
+          <span class="section-note">What I’m thinking about</span>
+        </div>
+        <div class="interests-grid">
+          <div class="interest-group primary-interests">
+            <span class="interest-marker" aria-hidden="true">↗</span>
+            <h3>Primary interests</h3>
+            <ul>
+              <li>Computer architecture</li>
+              <li>GPU/HPC systems</li>
+              <li>Hardware–software co-design</li>
+            </ul>
+          </div>
+          <div class="interest-group">
+            <span class="interest-marker" aria-hidden="true">+</span>
+            <h3>Related interests</h3>
+            <ul>
+              <li>Embedded systems</li>
+              <li>Signal processing</li>
+              <li>Machine learning systems</li>
+              <li>Hardware security</li>
+            </ul>
+          </div>
+          <div class="interest-group">
+            <span class="interest-marker" aria-hidden="true">◎</span>
+            <h3>Long-term areas I’m exploring</h3>
+            <ul>
+              <li>Semiconductor devices</li>
+              <li>RF/EM</li>
+              <li>Robotics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        class="section section-width experience-section"
+        aria-labelledby="experience-heading"
+      >
+        <div class="section-heading">
+          <h2 id="experience-heading">
+            <span class="section-number">04 /</span> Experience
+          </h2>
+          <a
+            class="text-link"
+            href="./assets/qihan-wang-resume.pdf"
+            target="_blank"
+            rel="noopener"
+            >Full resume
+            <svg class="icon" aria-hidden="true">
+              <use href="#arrow-up-right" /></svg
+          ></a>
+        </div>
+        <div class="experience-list">
+          <article class="experience-item">
+            <p class="experience-date">
+              2026 — 2030 <span>Expected graduation</span>
+            </p>
+            <div>
+              <h3>University of Illinois Urbana-Champaign</h3>
+              <p class="experience-role">B.S. Electrical Engineering</p>
+              <p>
+                Coursework in mathematics, computational linear algebra, and
+                electronics.
+              </p>
+            </div>
+            <span class="experience-type">Education</span>
+          </article>
+          <article class="experience-item">
+            <p class="experience-date">Summer 2025</p>
+            <div>
+              <h3>University of Houston — Computer Science Lab</h3>
+              <p class="experience-role">Research Intern</p>
+              <p>
+                Developed Python scripts to evaluate language-model reasoning
+                and cross-domain knowledge transfer across biology, mathematics,
+                and law, with Prof. Shi and Prof. Alsagheer.
+              </p>
+            </div>
+            <span class="experience-type">Research</span>
+          </article>
+          <article class="experience-item">
+            <p class="experience-date">2025 — 2026</p>
+            <div>
+              <h3>Steel City Codes</h3>
+              <p class="experience-role">National Program Director</p>
+              <p>
+                Supported computer science education through curriculum
+                development, outreach, and program coordination. Created digital
+                outreach content reaching approximately 50,000 views.
+              </p>
+            </div>
+            <span class="experience-type">Leadership</span>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-width footer-inner">
+        <div>
+          <a class="footer-name" href="#home"
+            >Blake / Qihan Wang<span>.</span></a
+          >
+          <p>
+            Electrical Engineering · University of Illinois Urbana-Champaign
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:cat.readme.txt@gmail.com"
+            >Email <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://github.com/cat-readme-txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Art &amp; design portfolio <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
