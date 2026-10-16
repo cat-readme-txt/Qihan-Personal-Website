@@ -1,6 +1,6 @@
 # Blake / Qihan Wang
 
-A static personal website with Home, Research, Projects, Technical Interests, and Experience sections. Built with HTML, CSS, and JavaScript, with no runtime dependencies.
+A static personal website with Home, Research, Ongoing, Projects, Technical Interests, and Experience sections, plus a separate course archive page. Built with HTML, CSS, and JavaScript, with no runtime dependencies.
 
 ## Preview locally
 
@@ -16,12 +16,19 @@ Open [localhost:4173](http://localhost:4173). Rebuild after editing to update th
 ## Edit the site
 
 - `index.html`: content, navigation, and links.
+- `courses.html`: generated course archive page.
+- `templates/courses.html` and `scripts/sync-courses.mjs`: archive template and sync script.
+- `courses.css` and `courses.js`: archive layout and filters.
 - `styles.css`: layout, colors, and responsive styling.
 - `script.js`: progressive enhancements.
 - `assets/`: public images and `qihan-wang-resume.pdf`.
 - `scripts/build.mjs`: copies the public files into `dist/` and adds `.nojekyll`.
 
-Everything in `assets/` is published. Keep source documents and private research data outside that folder. Relative asset links let the site work at either a GitHub Pages account domain or a repository subpath.
+Everything in `assets/` is published, including the course files under `assets/course-materials/`. Keep other private files outside that folder. Relative asset links let the site work at either a GitHub Pages account domain or a repository subpath.
+
+### Refresh the course archive
+
+Run `npm run sync:courses` to copy the seven course folders from `~/Documents/Obsidian Vault` into `assets/course-materials/` and regenerate `courses.html`. Set `COURSE_VAULT_PATH` to use a different vault location. The script skips hidden files, symbolic links, and files whose names begin with `(written)` (case-insensitive). It copies the course folders only; the archive page links to the full Obsidian Vault repository for later updates and other collections such as textbooks. Run `npm run build` after syncing.
 
 ## Deploy to GitHub Pages
 

@@ -8,6 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
+    "sync:courses": "node scripts/sync-courses.mjs",
     "build": "node scripts/build.mjs",
     "preview": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist"
   }

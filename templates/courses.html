@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta name="description" content="Course materials used by Qihan Wang, organized by course and category." />
+    <title>Course materials / Qihan Wang</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-q.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./courses.css" />
+    <script src="./courses.js" defer></script>
+  </head>
+  <body class="course-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner archive-header">
+        <a class="wordmark" href="./index.html#home" aria-label="Qihan Wang, home">Q</a>
+        <nav class="archive-header-links" aria-label="Page navigation">
+          <a href="./index.html#home">Portfolio <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/cat-readme-txt/Obsidian-Vault" target="_blank" rel="noopener noreferrer">Full vault <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="archive-hero section-width" aria-labelledby="archive-title">
+        <p class="eyebrow"><span class="small-cross" aria-hidden="true">+</span> Study archive</p>
+        <h1 id="archive-title">Course materials<span class="title-period">.</span></h1>
+        <p class="archive-lede">
+          PDFs, notes, and supporting files from <!-- COURSE_COUNT --> course folders,
+          arranged by course and category. This site contains a snapshot of <!-- FILE_COUNT --> files.
+          For later additions and other resources, including textbooks, browse my
+          <a href="https://github.com/cat-readme-txt/Obsidian-Vault" target="_blank" rel="noopener noreferrer">Obsidian Vault on GitHub</a>.
+        </p>
+      </section>
+      <section class="archive-section" aria-label="Browse materials">
+        <div class="section-width">
+          <div class="archive-controls">
+            <div class="archive-field archive-search">
+              <label for="material-search">Search materials</label>
+              <input id="material-search" type="search" placeholder="Search files or categories" autocomplete="off" />
+            </div>
+            <div class="archive-field archive-select">
+              <label for="course-filter">Course</label>
+              <select id="course-filter">
+                <option value="all">All courses</option>
+                <!-- COURSE_OPTIONS -->
+              </select>
+            </div>
+          </div>
+          <p id="archive-count" class="archive-count" role="status" aria-live="polite"><!-- FILE_COUNT --> files shown</p>
+          <nav class="course-index" aria-label="Jump to a course">
+          <!-- COURSE_INDEX -->
+          </nav>
+          <p class="archive-help">PDFs and images open in a new tab. Markdown notes are available as source files.</p>
+          <p id="archive-empty" class="archive-empty" hidden>No materials match this search.</p>
+          <div id="course-results">
+        <!-- COURSE_CONTENT -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="section-width footer-inner">
+        <div>
+          <a class="footer-name" href="./index.html#home">Blake / Qihan Wang<span>.</span></a>
+          <p>Course archive · University of Illinois Urbana-Champaign</p>
+        </div>
+        <div class="footer-links">
+          <a href="./index.html#home">Portfolio <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/cat-readme-txt/Obsidian-Vault" target="_blank" rel="noopener noreferrer">Full vault <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
