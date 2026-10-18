@@ -341,6 +341,15 @@ h1 {
   padding-block: 59px 68px;
   border-top: 1px solid var(--line);
 }
+.education-section {
+  background: #e9efe5;
+}
+.experience-section {
+  background: #e8eeec;
+}
+.skills-section {
+  background: #f0ecdf;
+}
 .section-heading {
   display: flex;
   justify-content: space-between;
