@@ -32,13 +32,13 @@ Run `npm run sync:courses` to copy the seven course folders from `~/Documents/Ob
 
 ## Deploy to GitHub Pages
 
-Repository: [cat-readme-txt/Personal-Website](https://github.com/cat-readme-txt/Personal-Website). Published site: [cat-readme-txt.github.io/Personal-Website/](https://cat-readme-txt.github.io/Personal-Website/).
+Repository: [cat-readme-txt/Qihan-Personal-Website](https://github.com/cat-readme-txt/Qihan-Personal-Website). Published site: [cat-readme-txt.github.io/Qihan-Personal-Website/](https://cat-readme-txt.github.io/Qihan-Personal-Website/).
 
 1. Push these source files to its `main` branch.
 2. Open the repository's **Settings → Pages** and select **GitHub Actions** as the source.
 3. Run **Deploy website to GitHub Pages** in the Actions tab, or push a new commit to `main`.
 4. Open the published URL shown by the deployment.
 
-The workflow builds and publishes only `dist/`. Future pushes to `main` deploy automatically. All local asset links are relative to support the `/Personal-Website/` repository subpath.
+The workflow builds and publishes only `dist/`. Future pushes to `main` deploy automatically. All local asset links are relative to support the `/Qihan-Personal-Website/` repository subpath.
 
 See [GitHub's custom Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) for the hosting setup.
