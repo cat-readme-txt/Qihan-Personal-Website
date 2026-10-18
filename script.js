@@ -61,7 +61,7 @@ window.addEventListener(
   { passive: true },
 );
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 620) closeMenu();
+  if (window.innerWidth > 960) closeMenu();
   updateActiveSection();
 });
 updateActiveSection();

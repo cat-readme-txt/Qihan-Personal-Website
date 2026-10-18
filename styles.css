@@ -362,6 +362,27 @@ h1 {
   color: var(--muted);
   letter-spacing: 0.5px;
 }
+.education-summary {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 28px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.education-summary h3 {
+  font-family: var(--serif);
+  font-size: clamp(28px, 3vw, 39px);
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 7px 0;
+}
+.education-summary p:last-child {
+  font-size: 12px;
+}
+.education-summary .text-link {
+  margin-bottom: 5px;
+}
 .section-note {
   font-size: 11px;
   color: var(--muted);
@@ -637,6 +658,31 @@ h1 {
   margin-left: auto;
   font-size: 10px;
 }
+.solar-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 30px;
+  border-top: 1px solid #47604f;
+  margin-top: 36px;
+  padding-top: 30px;
+}
+.solar-project h3 {
+  font-family: var(--serif);
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-top: 9px;
+}
+.solar-project > p {
+  font-size: 11px;
+  line-height: 1.9;
+}
+.solar-project a {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .ongoing-section {
   background: var(--sage);
 }
@@ -735,6 +781,24 @@ h1 {
   font-size: 20px;
   line-height: 1.7;
   letter-spacing: -0.3px;
+}
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  border-top: 1px solid var(--line);
+  margin-top: 38px;
+  padding-top: 28px;
+}
+.skills-list h3 {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.skills-list p {
+  font-size: 11px;
+  line-height: 1.9;
 }
 .experience-section {
   padding-bottom: 65px;
@@ -876,18 +940,66 @@ h1 {
     gap: 25px;
   }
 }
+@media (max-width: 960px) {
+  html {
+    scroll-padding-top: 90px;
+  }
+  .header-portfolio {
+    display: none;
+  }
+  .header-inner {
+    height: auto;
+    min-height: 74px;
+    flex-wrap: wrap;
+    padding-block: 15px;
+  }
+  .menu-toggle:not([hidden]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 5px 0 5px 15px;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 11px;
+  }
+  .menu-toggle span {
+    font-size: 21px;
+    line-height: 1;
+  }
+  .site-navigation {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 6px 22px;
+    flex-wrap: wrap;
+  }
+  .site-navigation a {
+    padding: 6px 0;
+  }
+  .site-navigation a::after {
+    bottom: 0;
+  }
+  .js .site-navigation:not(.is-open) {
+    display: none;
+  }
+  .js .site-navigation.is-open {
+    padding-bottom: 8px;
+  }
+}
 @media (max-width: 800px) {
   .header-portfolio {
     display: none;
   }
   .header-inner {
-    height: 74px;
+    height: auto;
+    min-height: 74px;
   }
   .site-navigation a {
-    padding: 26px 0;
+    padding: 6px 0;
   }
   .site-navigation a::after {
-    bottom: 17px;
+    bottom: 0;
   }
   .home {
     grid-template-columns: 1.35fr 1fr;
@@ -1037,6 +1149,18 @@ h1 {
   }
   .site-navigation a::after {
     bottom: 0;
+  }
+  .education-summary,
+  .solar-project {
+    display: block;
+  }
+  .education-summary .text-link,
+  .solar-project > p {
+    margin-top: 18px;
+  }
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .js .site-navigation:not(.is-open) {
     display: none;
