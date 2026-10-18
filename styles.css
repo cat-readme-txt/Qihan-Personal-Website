@@ -341,14 +341,10 @@ h1 {
   padding-block: 59px 68px;
   border-top: 1px solid var(--line);
 }
-.education-section {
-  background: #e9efe5;
-}
-.experience-section {
-  background: #e8eeec;
-}
+.education-section,
+.experience-section,
 .skills-section {
-  background: #f0ecdf;
+  background: #e9efe5;
 }
 .section-heading {
   display: flex;
