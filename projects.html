@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta
+      name="description"
+      content="Qihan Wang’s FPGA accelerator, Chronodox strategy game, and embedded hardware projects."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Projects / Qihan Wang"
+    />
+    <meta
+      property="og:description"
+      content="Qihan Wang’s FPGA accelerator, Chronodox strategy game, and embedded hardware projects."
+    />
+    <meta
+      property="og:url"
+      content="https://cat-readme-txt.github.io/Qihan-Personal-Website/projects.html"
+    />
+    <title>Projects / Qihan Wang</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-q.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="portfolio-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="./index.html" class="wordmark" aria-label="Qihan Wang, home"
+          >Q</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">+</span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="./index.html">Home</a>
+          <a href="./education.html">Education</a>
+          <a href="./research.html">Research</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./leadership.html">Leadership</a>
+          <a href="./interests.html">Skills &amp; Interests</a>
+          <a href="./projects.html" aria-current="page">Projects</a>
+          <a href="./ongoing.html">Ongoing</a>
+          <a href="./courses.html">Courses</a>
+        </nav>
+        <a
+          class="header-portfolio text-link"
+          href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Art &amp; design
+          <svg class="icon" aria-hidden="true">
+            <use href="#arrow-up-right" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section
+        id="projects"
+        class="section projects-section"
+        aria-labelledby="projects-heading"
+      >
+        <div class="section-width">
+          <div class="section-heading">
+            <h1 id="projects-heading">
+              <span class="section-number">06 /</span> Projects
+            </h1>
+            <span class="section-note">Ideas → working systems</span>
+          </div>
+          <article class="chronodox-project">
+            <div class="project-main">
+              <p class="eyebrow">Strategy simulation · 2026</p>
+              <h2>Chronodox<span class="title-period">.</span></h2>
+              <p class="project-tagline">
+                Three timelines.<br />Every decision echoes.
+              </p>
+              <p class="project-description">
+                A browser-based strategy game about agents competing across the
+                past, present, and future. I built a custom TypeScript engine
+                for hidden information, timeline traversal, an intel economy,
+                and paradoxes that can destroy cities and agents.
+              </p>
+              <p class="project-attribution">
+                Inspired by the iOS game <em>Two Spies</em>, then expanded with
+                paradox mechanics and layered timelines.
+              </p>
+              <div class="project-links">
+                <a
+                  class="button button-light"
+                  href="https://cat-readme-txt.github.io/Chronodox/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Play Chronodox
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#arrow-up-right" /></svg></a
+                ><a
+                  class="text-link"
+                  href="https://github.com/cat-readme-txt/Chronodox"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Source code
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#arrow-up-right" /></svg
+                ></a>
+              </div>
+            </div>
+            <figure class="timeline-figure">
+              <img
+                src="./assets/chronodox-timelines.svg"
+                alt="Conceptual diagram of Chronodox: connected city networks in the past, present, and future, with paths linking the three timelines."
+                width="640"
+                height="470"
+                loading="lazy"
+              />
+              <figcaption>
+                <span>CHRONODOX / SYSTEM STUDY</span
+                ><span>PAST · PRESENT · FUTURE</span>
+              </figcaption>
+            </figure>
+            <div class="project-features">
+              <div>
+                <span class="feature-number">01</span>
+                <h3>One shared engine</h3>
+                <p>
+                  Procedural maps, cross-timeline movement, and paradox
+                  resolution power both playable matches and AI self-play.
+                </p>
+              </div>
+              <div>
+                <span class="feature-number">02</span>
+                <h3>Learning through self-play</h3>
+                <p>
+                  A hybrid agent blends tactical heuristics with learned linear
+                  scores trained from more than 200,000 completed self-play
+                  samples. The browser uses checked-in policy artifacts.
+                </p>
+              </div>
+              <div>
+                <span class="feature-number">03</span>
+                <h3>From rules to interaction</h3>
+                <p>
+                  Animated timelines and a command terminal. A snapshot serializer
+                  and optional Node.js room host synchronize clients through HTTP
+                  polling and revision-checked state updates.
+                </p>
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="micro-label">Built with</span>
+              <p>
+                TypeScript / React / Zustand / Vite / Node.js / Tailwind CSS /
+                Framer Motion
+              </p>
+              <a
+                class="text-link"
+                href="https://github.com/cat-readme-txt/Chronodox/blob/main/docs/technical-overview.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Technical notes
+                <svg class="icon" aria-hidden="true">
+                  <use href="#arrow-up-right" /></svg
+              ></a>
+            </div>
+          </article>
+          <article class="fpga-project">
+            <div>
+              <p class="eyebrow">Digital hardware · SystemVerilog · 2026</p>
+              <h2>Pipelined INT8 FPGA accelerator</h2>
+              <p>
+                Built an eight-lane signed INT8 dot-product engine with exact
+                19-bit accumulation and ready/valid backpressure. Its four-stage
+                pipeline accepts one vector per clock cycle without stalls.
+              </p>
+              <div class="project-links">
+                <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator" target="_blank" rel="noopener noreferrer">Source code <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+                <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator/blob/main/evidence/VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation report <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+              </div>
+            </div>
+            <div class="fpga-evidence">
+              <div><strong>13,846</strong><span>exact output matches per core</span></div>
+              <div><strong>8 : 1</strong><span>Artix-7 DSP48E1 blocks, pipeline vs. serial</span></div>
+              <p>
+                Generated an iCE40UP5K bitstream at a 12 MHz clock constraint
+                and passed mapped-netlist functional simulation. The bitstream
+                has not been tested on a physical board.
+              </p>
+            </div>
+          </article>
+          <article class="solar-project">
+            <div>
+              <p class="eyebrow">Embedded systems · Illini Solar Car · 2026</p>
+              <h2>PCB and firmware work</h2>
+            </div>
+            <p>
+              Designed an LED and resistor PCB in KiCad, then implemented
+              potentiometer-controlled LED brightness in MCUXpresso IDE.
+              Current HIL and sensors work is detailed in <a href="./ongoing.html#ongoing-solar-car">Ongoing</a>.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-width footer-inner">
+        <div>
+          <a class="footer-name" href="./index.html"
+            >Blake / Qihan Wang<span>.</span></a
+          >
+          <p>
+            Electrical Engineering · University of Illinois Urbana-Champaign
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:blakew3@illinois.edu"
+            >Email <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://github.com/cat-readme-txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Art &amp; design portfolio <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

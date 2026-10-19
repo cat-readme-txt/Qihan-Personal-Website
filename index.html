@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#f7f7f2" />
     <meta
       name="description"
-      content="Blake (Qihan) Wang — Electrical Engineering at UIUC. Research in EEG signal processing, GPU computing, and hardware–software systems."
+      content="Blake (Qihan) Wang — Electrical Engineering at UIUC. FPGA design, GPU computing, embedded systems, and EEG signal processing."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -15,7 +15,7 @@
     />
     <meta
       property="og:description"
-      content="Electrical Engineering at UIUC. Education, research, experience, projects, and ongoing work."
+      content="Blake (Qihan) Wang — Electrical Engineering at UIUC. FPGA design, GPU computing, embedded systems, and EEG signal processing."
     />
     <meta
       property="og:url"
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
-  <body>
+  <body class="portfolio-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <svg
       class="icon-definitions"
@@ -46,7 +46,7 @@
 
     <header class="site-header">
       <div class="header-inner">
-        <a href="#home" class="wordmark" aria-label="Qihan Wang, home"
+        <a href="./index.html" class="wordmark" aria-label="Qihan Wang, home"
           >Q</a
         >
         <button
@@ -63,14 +63,14 @@
           class="site-navigation"
           aria-label="Main navigation"
         >
-          <a href="#home" aria-current="location">Home</a>
-          <a href="#education">Education</a>
-          <a href="#research">Research</a>
-          <a href="#experience">Experience</a>
-          <a href="#leadership">Leadership</a>
-          <a href="#interests">Skills &amp; Interests</a>
-          <a href="#projects">Projects</a>
-          <a href="#ongoing">Ongoing</a>
+          <a href="./index.html" aria-current="page">Home</a>
+          <a href="./education.html">Education</a>
+          <a href="./research.html">Research</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./leadership.html">Leadership</a>
+          <a href="./interests.html">Skills &amp; Interests</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./ongoing.html">Ongoing</a>
           <a href="./courses.html">Courses</a>
         </nav>
         <a
@@ -100,9 +100,8 @@
             Blake Wang<span class="alternate-name">/ Qihan Wang</span>
           </h1>
           <p class="home-focus">
-            Electrical Engineering student interested in computer architecture,
-            GPU computing, hardware–software systems, signal processing, and
-            intelligent systems.
+            Electrical Engineering student working across FPGA design, GPU
+            computing, embedded systems, and signal processing.
           </p>
           <div class="home-actions">
             <a
@@ -135,7 +134,7 @@
           <h2 class="eyebrow" id="current-heading">
             <span class="status-dot" aria-hidden="true"></span> On my desk
           </h2>
-          <a class="highlight highlight-link" href="#ongoing-nuclear">
+          <a class="highlight highlight-link" href="./ongoing.html#ongoing-nuclear">
             <span class="highlight-number" aria-hidden="true">01</span>
             <div>
               <p class="micro-label">Computational physics</p>
@@ -145,7 +144,7 @@
               </p>
             </div>
           </a>
-          <a class="highlight highlight-link" href="#ongoing-dissco">
+          <a class="highlight highlight-link" href="./ongoing.html#ongoing-dissco">
             <span class="highlight-number" aria-hidden="true">02</span>
             <div>
               <p class="micro-label">Computer music</p>
@@ -153,7 +152,7 @@
               <p>Developing CUDA support for additive sound synthesis.</p>
             </div>
           </a>
-          <a class="highlight highlight-link" href="#ongoing-thin-film">
+          <a class="highlight highlight-link" href="./ongoing.html#ongoing-thin-film">
             <span class="highlight-number" aria-hidden="true">03</span>
             <div>
               <p class="micro-label">Semiconductor devices</p>
@@ -161,507 +160,22 @@
               <p>Onboarding with Peter Wilson in Professor Kim’s lab.</p>
             </div>
           </a>
-          <a class="highlight highlight-link" href="#ongoing-solar-car">
+          <a class="highlight highlight-link" href="./ongoing.html#ongoing-solar-car">
             <span class="highlight-number" aria-hidden="true">04</span>
             <div>
               <p class="micro-label">Embedded systems</p>
               <h3>Illini Solar Car <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
-              <p>Designing Zephyr firmware for hardware-in-the-loop testing.</p>
+              <p>Evaluating Delos blind-spot sensors and preparing Zephyr HIL tests.</p>
             </div>
           </a>
         </aside>
       </section>
-
-      <section
-        id="education"
-        class="section education-section"
-        aria-labelledby="education-heading"
-      >
-        <div class="section-width">
-          <div class="section-heading">
-            <h2 id="education-heading">
-              <span class="section-number">01 /</span> Education
-            </h2>
-            <span class="section-note">Urbana–Champaign, Illinois</span>
-          </div>
-          <div class="education-summary">
-            <div>
-              <p class="eyebrow">University of Illinois Urbana-Champaign</p>
-              <h3>B.S. in Electrical Engineering</h3>
-              <p>Expected May 2029</p>
-            </div>
-            <a class="text-link" href="./courses.html">Browse course materials
-              <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="research"
-        class="section section-width"
-        aria-labelledby="research-heading"
-      >
-        <div class="section-heading">
-          <h2 id="research-heading">
-            <span class="section-number">02 /</span> Research
-          </h2>
-          <span class="section-note">Signals → understanding</span>
-        </div>
-        <article class="research-project">
-          <div class="research-title-row">
-            <div>
-              <p class="eyebrow">Independent research · Researcher · 2026</p>
-              <h3>Resource-constrained<br />EEG motor classification</h3>
-            </div>
-            <a
-              class="text-link"
-              href="https://github.com/cat-readme-txt/EEG-Analysis"
-              target="_blank"
-              rel="noopener noreferrer"
-              >View repository
-              <svg class="icon" aria-hidden="true">
-                <use href="#arrow-up-right" /></svg
-            ></a>
-          </div>
-          <p class="research-lede">
-            How well can lightweight classifiers distinguish left- and
-            right-fist movement—and imagined movement—in people they haven’t
-            seen before?
-          </p>
-          <div class="research-grid">
-            <div class="research-copy">
-              <div class="detail-block">
-                <h4>Why it matters</h4>
-                <p>
-                  Brain–computer interfaces must work within real constraints:
-                  fewer electrodes, shorter decision windows, limited
-                  calibration, and noisy signals. Accuracy is only part of the
-                  problem.
-                </p>
-              </div>
-              <div class="detail-block">
-                <h4>What I did</h4>
-                <p>
-                  I designed and implemented the benchmark, built the EEG
-                  preprocessing pipeline, ran the statistical analyses, and
-                  prepared the visualizations and manuscript.
-                </p>
-              </div>
-              <div class="detail-block">
-                <h4>Technical methods</h4>
-                <p>
-                  Band power, Hjorth parameters, wavelet energy, common spatial
-                  patterns (CSP), and filter-bank CSP, paired with shrinkage
-                  linear discriminant analysis. Leave-one-subject-out evaluation
-                  measures transfer to unseen participants; further experiments
-                  test calibration, channel reduction, short windows, and
-                  simulated artifacts.
-                </p>
-              </div>
-              <div class="tools-line">
-                <span class="micro-label">Tools &amp; languages</span>
-                <p>
-                  Python · MNE · NumPy · pandas · SciPy · scikit-learn ·
-                  PyWavelets · Matplotlib · Jupyter
-                </p>
-              </div>
-            </div>
-            <div class="research-evidence">
-              <div class="research-stats" aria-label="Benchmark scope">
-                <div><strong>109</strong><span>participants</span></div>
-                <div><strong>5</strong><span>feature methods</span></div>
-                <div><strong>16</strong><span>scenarios</span></div>
-              </div>
-              <figure class="research-figure">
-                <a
-                  href="./assets/eeg-channel-reduction.png"
-                  target="_blank"
-                  rel="noopener"
-                  aria-label="Open full-size EEG channel reduction figure"
-                  ><img
-                    src="./assets/eeg-channel-reduction.png"
-                    alt="EEG benchmark plotting the best mean leave-one-subject-out accuracy against electrode count for movement and imagery. The 64-channel results exceed 62 percent; a dashed line marks 50 percent chance accuracy."
-                    width="1580"
-                    height="940"
-                    loading="lazy"
-                /></a>
-                <figcaption>
-                  <span class="figure-number">Fig. 01</span> Channel-count
-                  benchmark. Best mean accuracy across evaluated pipelines; the
-                  dashed line marks chance (50%).
-                  <span class="figure-hint">Select to enlarge ↗</span>
-                </figcaption>
-              </figure>
-              <div class="research-status">
-                <span class="status-dot" aria-hidden="true"></span>
-                <p>
-                  <strong>Analysis complete · Manuscript drafted</strong
-                  ><span
-                    >Offline benchmark; prepared for faculty feedback.</span
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <section
-        id="experience"
-        class="section experience-section"
-        aria-labelledby="experience-heading"
-      >
-        <div class="section-width">
-          <div class="section-heading">
-            <h2 id="experience-heading">
-              <span class="section-number">03 /</span> Experience
-            </h2>
-            <a
-              class="text-link"
-              href="./assets/qihan-wang-resume.pdf"
-              target="_blank"
-              rel="noopener"
-              >Full resume
-              <svg class="icon" aria-hidden="true">
-                <use href="#arrow-up-right" /></svg
-            ></a>
-          </div>
-          <div class="experience-list">
-            <article class="experience-item">
-              <p class="experience-date">Oct. 2026 — present</p>
-              <div>
-                <h3>Nuclear pasta simulation · Dr. Soham Pal</h3>
-                <p class="experience-role">Research · CUDA computing</p>
-                <p>
-                  Implemented an FP64 CUDA kernel for nuclear and screened
-                  Coulomb forces, with periodic boundaries and shifted-force
-                  cutoffs. Built CPU/GPU numerical validation and CUDA-event
-                  benchmarks with persistent device buffers.
-                </p>
-              </div>
-              <span class="experience-type">Research</span>
-            </article>
-            <article class="experience-item">
-              <p class="experience-date">Current</p>
-              <div>
-                <h3>DISSCO · Professor Sever Tipei</h3>
-                <p class="experience-role">GPU acceleration</p>
-                <p>
-                  Working on a CUDA rendering path for additive sound synthesis,
-                  including GPU selection and a CPU fallback.
-                </p>
-              </div>
-              <span class="experience-type">Research</span>
-            </article>
-            <article class="experience-item">
-              <p class="experience-date">Current</p>
-              <div>
-                <h3>Illini Solar Car</h3>
-                <p class="experience-role">Hardware-in-the-loop and Sensors Teams</p>
-                <p>
-                  Designing Zephyr firmware for hardware-in-the-loop testing as
-                  the I/O interfaces and microcontroller are selected.
-                </p>
-              </div>
-              <span class="experience-type">Team</span>
-            </article>
-            <article class="experience-item">
-              <p class="experience-date">Summer 2025</p>
-              <div>
-                <h3>University of Houston — Computer Science Lab</h3>
-                <p class="experience-role">Research Intern</p>
-                <p>
-                  Developed Python scripts to evaluate language-model reasoning
-                  and cross-domain knowledge transfer across biology, mathematics,
-                  and law, with Prof. Shi and Prof. Alsagheer.
-                </p>
-              </div>
-              <span class="experience-type">Research</span>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section
-        id="leadership"
-        class="section section-width leadership-section"
-        aria-labelledby="leadership-heading"
-      >
-        <div class="section-heading">
-          <h2 id="leadership-heading">
-            <span class="section-number">04 /</span> Leadership
-          </h2>
-          <span class="section-note">Activities &amp; service</span>
-        </div>
-        <div class="experience-list">
-          <article class="experience-item">
-            <p class="experience-date">2025 — 2026</p>
-            <div>
-              <h3>Steel City Codes</h3>
-              <p class="experience-role">National Program Director</p>
-              <p>
-                Supported computer science education through curriculum
-                development, outreach, and program coordination. Created digital
-                outreach content reaching approximately 50,000 views.
-              </p>
-            </div>
-            <span class="experience-type">Leadership</span>
-          </article>
-          <article class="experience-item">
-            <p class="experience-date">2025</p>
-            <div>
-              <h3>CyberPatriot</h3>
-              <p class="experience-role">Platinum Semifinalist · 5th Place NJROTC Semifinals</p>
-              <p>
-                Hardened Linux systems in virtualized environments using Bash,
-                system administration, and cybersecurity tools.
-              </p>
-            </div>
-            <span class="experience-type">Competition</span>
-          </article>
-        </div>
-      </section>
-      <section
-        id="interests"
-        class="section skills-section"
-        aria-labelledby="interests-heading"
-      >
-        <div class="section-width">
-          <div class="section-heading">
-            <h2 id="interests-heading">
-              <span class="section-number">05 /</span> Skills &amp; Interests
-            </h2>
-            <span class="section-note">What I use and explore</span>
-          </div>
-          <div class="interests-grid">
-            <div class="interest-group primary-interests">
-              <span class="interest-marker" aria-hidden="true">↗</span>
-              <h3>Primary interests</h3>
-              <ul>
-                <li>Computer architecture</li>
-                <li>GPU/HPC systems</li>
-                <li>Hardware–software co-design</li>
-              </ul>
-            </div>
-            <div class="interest-group">
-              <span class="interest-marker" aria-hidden="true">+</span>
-              <h3>Related interests</h3>
-              <ul>
-                <li>Embedded systems</li>
-                <li>Signal processing</li>
-                <li>Machine learning systems</li>
-                <li>Hardware security</li>
-              </ul>
-            </div>
-            <div class="interest-group">
-              <span class="interest-marker" aria-hidden="true">◎</span>
-              <h3>Long-term areas I’m exploring</h3>
-              <ul>
-                <li>Semiconductor devices</li>
-                <li>RF/EM</li>
-                <li>Robotics</li>
-              </ul>
-            </div>
-          </div>
-          <div class="skills-list" aria-label="Technical skills">
-            <div><h3>Languages</h3><p>C++ · C · Python · Java · Bash · TypeScript · JavaScript</p></div>
-            <div><h3>Platforms &amp; tools</h3><p>CUDA · Linux · Git · virtual machines · KiCad · MCUXpresso IDE</p></div>
-            <div><h3>Libraries &amp; frameworks</h3><p>NumPy · MNE · React · Node.js · HTML · CSS</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="projects"
-        class="section projects-section"
-        aria-labelledby="projects-heading"
-      >
-        <div class="section-width">
-          <div class="section-heading">
-            <h2 id="projects-heading">
-              <span class="section-number">06 /</span> Projects
-            </h2>
-            <span class="section-note">Ideas → working systems</span>
-          </div>
-          <article class="chronodox-project">
-            <div class="project-main">
-              <p class="eyebrow">Strategy simulation · 2026</p>
-              <h3>Chronodox<span class="title-period">.</span></h3>
-              <p class="project-tagline">
-                Three timelines.<br />Every decision echoes.
-              </p>
-              <p class="project-description">
-                A browser-based strategy game about agents competing across the
-                past, present, and future. I built a custom TypeScript engine
-                for hidden information, timeline traversal, an intel economy,
-                and paradoxes that can destroy cities and agents.
-              </p>
-              <p class="project-attribution">
-                Inspired by the iOS game <em>Two Spies</em>, then expanded with
-                paradox mechanics and layered timelines.
-              </p>
-              <div class="project-links">
-                <a
-                  class="button button-light"
-                  href="https://cat-readme-txt.github.io/Chronodox/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Play Chronodox
-                  <svg class="icon" aria-hidden="true">
-                    <use href="#arrow-up-right" /></svg></a
-                ><a
-                  class="text-link"
-                  href="https://github.com/cat-readme-txt/Chronodox"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Source code
-                  <svg class="icon" aria-hidden="true">
-                    <use href="#arrow-up-right" /></svg
-                ></a>
-              </div>
-            </div>
-            <figure class="timeline-figure">
-              <img
-                src="./assets/chronodox-timelines.svg"
-                alt="Conceptual diagram of Chronodox: connected city networks in the past, present, and future, with paths linking the three timelines."
-                width="640"
-                height="470"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>CHRONODOX / SYSTEM STUDY</span
-                ><span>PAST · PRESENT · FUTURE</span>
-              </figcaption>
-            </figure>
-            <div class="project-features">
-              <div>
-                <span class="feature-number">01</span>
-                <h4>One shared engine</h4>
-                <p>
-                  Procedural maps, cross-timeline movement, and paradox
-                  resolution power both playable matches and AI self-play.
-                </p>
-              </div>
-              <div>
-                <span class="feature-number">02</span>
-                <h4>Learning through self-play</h4>
-                <p>
-                  A hybrid agent blends tactical heuristics with learned linear
-                  scores. An offline pipeline generates the browser’s policy
-                  artifacts.
-                </p>
-              </div>
-              <div>
-                <span class="feature-number">03</span>
-                <h4>From rules to interaction</h4>
-                <p>
-                  Animated timeline views, a command terminal, and an optional
-                  Node.js host for multiplayer synchronization.
-                </p>
-              </div>
-            </div>
-            <div class="project-stack">
-              <span class="micro-label">Built with</span>
-              <p>
-                TypeScript / React / Zustand / Vite / Node.js / Tailwind CSS /
-                Framer Motion
-              </p>
-              <a
-                class="text-link"
-                href="https://github.com/cat-readme-txt/Chronodox/blob/main/docs/technical-overview.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Technical notes
-                <svg class="icon" aria-hidden="true">
-                  <use href="#arrow-up-right" /></svg
-              ></a>
-            </div>
-          </article>
-          <article class="solar-project">
-            <div>
-              <p class="eyebrow">Embedded systems · Illini Solar Car · 2026</p>
-              <h3>PCB and firmware work</h3>
-            </div>
-            <p>
-              Designed an LED and resistor PCB in KiCad, then implemented
-              potentiometer-controlled LED brightness in MCUXpresso IDE.
-              Current HIL and sensors work is detailed in <a href="#ongoing-solar-car">Ongoing</a>.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="ongoing" class="section ongoing-section" aria-labelledby="ongoing-heading">
-        <div class="section-width ongoing-projects">
-          <div class="ongoing-heading">
-            <div>
-              <p class="eyebrow">07 / In progress · 2026</p>
-              <h2 id="ongoing-heading">Current work</h2>
-            </div>
-            <p>These efforts are ongoing. I’ll add results and technical details as the work progresses.</p>
-          </div>
-          <div class="ongoing-grid">
-            <article id="ongoing-nuclear" class="ongoing-card">
-              <p class="micro-label">01 / Computational physics</p>
-              <h3>Nuclear pasta simulation</h3>
-              <p>
-                Working under Dr. Soham Pal at Illinois on CUDA-based particle
-                simulations of dense nuclear matter. I implemented an FP64
-                all-pairs force kernel with periodic boundaries and
-                shifted-force cutoffs, plus CPU/GPU validation and CUDA-event
-                benchmarks. Development uses Illinois Computes Research Notebooks
-                (ICRN), a browser-accessible research environment with NVIDIA
-                GPU options.
-              </p>
-              <a class="text-link" href="https://computes.illinois.edu/resources/icrn/" target="_blank" rel="noopener noreferrer">About ICRN <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
-            </article>
-            <article id="ongoing-dissco" class="ongoing-card">
-              <p class="micro-label">02 / Computer music</p>
-              <h3>DISSCO GPU acceleration</h3>
-              <p>
-                Working with Professor Sever Tipei on GPU acceleration for
-                DISSCO, a system for composition and additive sound synthesis.
-                My focus is the costly rendering path: generating and combining
-                individual sound partials, with loudness processing and effects.
-                My work is to develop a CUDA path that detects compatible
-                local or external NVIDIA GPUs, falls back to the CPU when
-                needed, and can run on cloud-hosted GPUs.
-              </p>
-              <a class="text-link" href="https://github.com/cmp-illinois/DISSCO" target="_blank" rel="noopener noreferrer">DISSCO source <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
-            </article>
-            <article id="ongoing-thin-film" class="ongoing-card">
-              <p class="micro-label">03 / Semiconductor devices</p>
-              <h3>Thin-film fabrication</h3>
-              <p>
-                Working alongside graduate researcher Peter Wilson in
-                Professor Kevin Kim’s Thin Film and Charged Particle Research
-                Lab. Our current area is gallium-oxide thin films for power
-                and optoelectronic devices. I am onboarding now; my specific
-                fabrication and photonics tasks are still being defined.
-              </p>
-              <a class="text-link" href="https://www.mrs.org/meetings-events/annual-meetings/archive/meeting/presentations/view/2026-mrs-spring-meeting/2026-mrs-spring-meeting-4433479" target="_blank" rel="noopener noreferrer">Related lab research <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
-            </article>
-            <article id="ongoing-solar-car" class="ongoing-card">
-              <p class="micro-label">04 / Embedded systems</p>
-              <h3>Illini Solar Car</h3>
-              <p>
-                On the hardware-in-the-loop and sensors teams, I am responsible
-                for designing Zephyr RTOS firmware for HIL testing. The I/O
-                interfaces and microcontroller are being selected by the
-                relevant teams; those decisions will guide the next stage of
-                firmware development and testing.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
     </main>
 
     <footer class="site-footer">
       <div class="section-width footer-inner">
         <div>
-          <a class="footer-name" href="#home"
+          <a class="footer-name" href="./index.html"
             >Blake / Qihan Wang<span>.</span></a
           >
           <p>

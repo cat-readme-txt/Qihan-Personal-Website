@@ -9,17 +9,64 @@
     <link rel="icon" type="image/svg+xml" href="./assets/favicon-q.svg" />
     <link rel="stylesheet" href="./styles.css" />
     <link rel="stylesheet" href="./courses.css" />
+    <script src="./script.js" defer></script>
     <script src="./courses.js" defer></script>
   </head>
   <body class="course-page">
     <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
+      </symbol>
+    </svg>
     <header class="site-header">
-      <div class="header-inner archive-header">
-        <a class="wordmark" href="./index.html#home" aria-label="Qihan Wang, home">Q</a>
-        <nav class="archive-header-links" aria-label="Page navigation">
-          <a href="./index.html#home">Portfolio <span aria-hidden="true">↗</span></a>
-          <a href="https://github.com/cat-readme-txt/Obsidian-Vault" target="_blank" rel="noopener noreferrer">Full vault <span aria-hidden="true">↗</span></a>
+      <div class="header-inner">
+        <a href="./index.html" class="wordmark" aria-label="Qihan Wang, home"
+          >Q</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">+</span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="./index.html">Home</a>
+          <a href="./education.html">Education</a>
+          <a href="./research.html">Research</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./leadership.html">Leadership</a>
+          <a href="./interests.html">Skills &amp; Interests</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./ongoing.html">Ongoing</a>
+          <a href="./courses.html" aria-current="page">Courses</a>
         </nav>
+        <a
+          class="header-portfolio text-link"
+          href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Art &amp; design
+          <svg class="icon" aria-hidden="true">
+            <use href="#arrow-up-right" /></svg
+        ></a>
       </div>
     </header>
     <main id="main">
@@ -63,11 +110,11 @@
     <footer class="site-footer">
       <div class="section-width footer-inner">
         <div>
-          <a class="footer-name" href="./index.html#home">Blake / Qihan Wang<span>.</span></a>
+          <a class="footer-name" href="./index.html">Blake / Qihan Wang<span>.</span></a>
           <p>Course archive · University of Illinois Urbana-Champaign</p>
         </div>
         <div class="footer-links">
-          <a href="./index.html#home">Portfolio <span aria-hidden="true">↗</span></a>
+          <a href="./index.html">Portfolio <span aria-hidden="true">↗</span></a>
           <a href="https://github.com/cat-readme-txt/Obsidian-Vault" target="_blank" rel="noopener noreferrer">Full vault <span aria-hidden="true">↗</span></a>
         </div>
       </div>

@@ -4,7 +4,22 @@ import { join } from "node:path";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const output = join(root, "dist");
-const publicFiles = ["index.html", "courses.html", "styles.css", "courses.css", "script.js", "courses.js", "assets"];
+const publicFiles = [
+  "index.html",
+  "education.html",
+  "research.html",
+  "experience.html",
+  "leadership.html",
+  "interests.html",
+  "projects.html",
+  "ongoing.html",
+  "courses.html",
+  "styles.css",
+  "courses.css",
+  "script.js",
+  "courses.js",
+  "assets",
+];
 
 await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });

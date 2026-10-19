@@ -1,6 +1,6 @@
 # Blake / Qihan Wang
 
-A static personal website with Home, Research, Ongoing, Projects, Technical Interests, and Experience sections, plus a separate course archive page. Built with HTML, CSS, and JavaScript, with no runtime dependencies.
+A static personal website with separate pages for Home, Education, Research, Experience, Leadership, Skills & Interests, Projects, Ongoing, and Courses. Each page has the same top navigation. Built with HTML, CSS, and JavaScript, with no runtime dependencies.
 
 ## Preview locally
 
@@ -15,12 +15,13 @@ Open [localhost:4173](http://localhost:4173). Rebuild after editing to update th
 
 ## Edit the site
 
-- `index.html`: content, navigation, and links.
+- `index.html`: Home page.
+- `education.html`, `research.html`, `experience.html`, `leadership.html`, `interests.html`, `projects.html`, and `ongoing.html`: portfolio pages.
 - `courses.html`: generated course archive page.
-- `templates/courses.html` and `scripts/sync-courses.mjs`: archive template and sync script.
+- `templates/courses.html` and `scripts/sync-courses.mjs`: archive template and sync script. Keep its top navigation in step with the portfolio pages before regenerating `courses.html`.
 - `courses.css` and `courses.js`: archive layout and filters.
 - `styles.css`: layout, colors, and responsive styling.
-- `script.js`: progressive enhancements.
+- `script.js`: mobile navigation and redirects for old section links.
 - `assets/`: public images and `qihan-wang-resume.pdf`.
 - `scripts/build.mjs`: copies the public files into `dist/` and adds `.nojekyll`.
 
