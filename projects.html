@@ -98,125 +98,115 @@
             </h1>
             <span class="section-note">Ideas → working systems</span>
           </div>
-          <article class="chronodox-project">
-            <div class="project-main">
-              <p class="eyebrow">Strategy simulation · 2026</p>
-              <h2>Chronodox<span class="title-period">.</span></h2>
-              <p class="project-tagline">
-                Three timelines.<br />Every decision echoes.
-              </p>
-              <p class="project-description">
-                A browser-based strategy game about agents competing across the
-                past, present, and future. I built a custom TypeScript engine
-                for hidden information, timeline traversal, an intel economy,
-                and paradoxes that can destroy cities and agents.
-              </p>
-              <p class="project-attribution">
-                Inspired by the iOS game <em>Two Spies</em>, then expanded with
-                paradox mechanics and layered timelines.
-              </p>
-              <div class="project-links">
-                <a
-                  class="button button-light"
-                  href="https://cat-readme-txt.github.io/Chronodox/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Play Chronodox
-                  <svg class="icon" aria-hidden="true">
-                    <use href="#arrow-up-right" /></svg></a
-                ><a
-                  class="text-link"
-                  href="https://github.com/cat-readme-txt/Chronodox"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Source code
-                  <svg class="icon" aria-hidden="true">
-                    <use href="#arrow-up-right" /></svg
-                ></a>
+          <div class="featured-projects" aria-label="Featured projects">
+            <article id="project-chronodox" class="featured-project featured-project--chronodox" aria-labelledby="chronodox-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">01 / Featured project</span>
+                <span>Strategy simulation · 2026</span>
               </div>
-            </div>
-            <figure class="timeline-figure">
-              <img
-                src="./assets/chronodox-timelines.svg"
-                alt="Conceptual diagram of Chronodox: connected city networks in the past, present, and future, with paths linking the three timelines."
-                width="640"
-                height="470"
-                loading="lazy"
-              />
-              <figcaption>
-                <span>CHRONODOX / SYSTEM STUDY</span
-                ><span>PAST · PRESENT · FUTURE</span>
-              </figcaption>
-            </figure>
-            <div class="project-features">
-              <div>
-                <span class="feature-number">01</span>
-                <h3>One shared engine</h3>
-                <p>
-                  Procedural maps, cross-timeline movement, and paradox
-                  resolution power both playable matches and AI self-play.
-                </p>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="chronodox-title">Chronodox<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Three timelines.<br />Every decision echoes.</p>
+                  <p class="featured-project-description">
+                    A browser-based strategy game about agents competing across the
+                    past, present, and future. I built a custom TypeScript engine
+                    for hidden information, timeline traversal, an intel economy,
+                    and paradoxes that can destroy cities and agents.
+                  </p>
+                  <p class="featured-project-attribution">
+                    Inspired by the iOS game <em>Two Spies</em>, then expanded with
+                    paradox mechanics and layered timelines.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-light" href="https://cat-readme-txt.github.io/Chronodox/" target="_blank" rel="noopener noreferrer">Play Chronodox
+                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                    </a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/Chronodox" target="_blank" rel="noopener noreferrer">Source code
+                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <figure class="featured-project-media chronodox-media">
+                  <video controls playsinline preload="metadata" poster="./assets/chronodox-demo-poster.jpg" width="1280" height="764" aria-label="Chronodox gameplay demonstration">
+                    <source src="./assets/chronodox-demo.mp4" type="video/mp4" />
+                    Your browser cannot play this video. <a href="./assets/chronodox-demo.mp4">Download the demo</a>.
+                  </video>
+                  <figcaption><span>CHRONODOX / GAMEPLAY DEMO</span><span>PAST · PRESENT · FUTURE</span></figcaption>
+                </figure>
               </div>
-              <div>
-                <span class="feature-number">02</span>
-                <h3>Learning through self-play</h3>
-                <p>
-                  A hybrid agent blends tactical heuristics with learned linear
-                  scores trained from more than 200,000 completed self-play
-                  samples. The browser uses checked-in policy artifacts.
-                </p>
+              <div class="featured-project-details">
+                <div>
+                  <span class="feature-number">01</span>
+                  <h3>One shared engine</h3>
+                  <p>Procedural maps, cross-timeline movement, and paradox resolution power both playable matches and AI self-play.</p>
+                </div>
+                <div>
+                  <span class="feature-number">02</span>
+                  <h3>Learning through self-play</h3>
+                  <p>A hybrid agent blends tactical heuristics with learned linear scores trained from more than 200,000 completed self-play samples.</p>
+                </div>
+                <div>
+                  <span class="feature-number">03</span>
+                  <h3>From rules to interaction</h3>
+                  <p>Animated timelines and a command terminal. An optional Node.js room host synchronizes clients with revision-checked state updates.</p>
+                </div>
               </div>
-              <div>
-                <span class="feature-number">03</span>
-                <h3>From rules to interaction</h3>
-                <p>
-                  Animated timelines and a command terminal. A snapshot serializer
-                  and optional Node.js room host synchronize clients through HTTP
-                  polling and revision-checked state updates.
-                </p>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Built with</span>
+                <p>TypeScript / React / Zustand / Vite / Node.js / Tailwind CSS / Framer Motion</p>
+                <a class="text-link" href="https://github.com/cat-readme-txt/Chronodox/blob/main/docs/technical-overview.md" target="_blank" rel="noopener noreferrer">Technical notes
+                  <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                </a>
               </div>
-            </div>
-            <div class="project-stack">
-              <span class="micro-label">Built with</span>
-              <p>
-                TypeScript / React / Zustand / Vite / Node.js / Tailwind CSS /
-                Framer Motion
-              </p>
-              <a
-                class="text-link"
-                href="https://github.com/cat-readme-txt/Chronodox/blob/main/docs/technical-overview.md"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Technical notes
-                <svg class="icon" aria-hidden="true">
-                  <use href="#arrow-up-right" /></svg
-              ></a>
-            </div>
-          </article>
-          <article class="fpga-project">
-            <div>
-              <p class="eyebrow">Digital hardware · SystemVerilog · 2026</p>
-              <h2>Pipelined INT8 FPGA accelerator</h2>
-              <p>
-                Built an eight-lane signed INT8 dot-product engine with exact
-                19-bit accumulation and ready/valid backpressure. Its four-stage
-                pipeline accepts one vector per clock cycle without stalls.
-              </p>
-              <div class="project-links">
-                <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator" target="_blank" rel="noopener noreferrer">Source code <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
-                <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator/blob/main/evidence/VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation report <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+            </article>
+            <article id="project-fpga" class="featured-project featured-project--fpga" aria-labelledby="fpga-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">02 / Featured project</span>
+                <span>Digital hardware · SystemVerilog · 2026</span>
               </div>
-            </div>
-            <div class="fpga-evidence">
-              <div><strong>13,846</strong><span>exact output matches per core</span></div>
-              <div><strong>8 : 1</strong><span>Artix-7 DSP48E1 blocks, pipeline vs. serial</span></div>
-              <p>
-                Generated an iCE40UP5K bitstream at a 12 MHz clock constraint
-                and passed mapped-netlist functional simulation. The bitstream
-                has not been tested on a physical board.
-              </p>
-            </div>
-          </article>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="fpga-title">Pipelined INT8<br />FPGA accelerator<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Eight signed INT8 lanes.<br />One result per cycle without stalls.</p>
+                  <p class="featured-project-description">
+                    Built a four-stage streaming dot-product engine with exact
+                    19-bit accumulation and ready/valid backpressure. The
+                    registered reduction tree keeps each vector's arithmetic
+                    exact from signed products to the final sum.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-primary" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator" target="_blank" rel="noopener noreferrer">Source code
+                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                    </a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator/blob/main/evidence/VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation report
+                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="fpga-visual" role="img" aria-label="Four registered stages: eight 16-bit signed products, four 17-bit pair sums, two 18-bit quad sums, and one exact 19-bit final result">
+                  <div class="fpga-visual-head"><span>DOT8 / STREAMING DATAPATH</span><span>RTL STUDY</span></div>
+                  <div class="fpga-stage-grid">
+                    <div><span>01 / 8 ×</span><strong>16 bit</strong><small>Signed products</small></div>
+                    <div><span>02 / 4 ×</span><strong>17 bit</strong><small>Pair sums</small></div>
+                    <div><span>03 / 2 ×</span><strong>18 bit</strong><small>Quad sums</small></div>
+                    <div><span>04 / 1 ×</span><strong>19 bit</strong><small>Final result</small></div>
+                  </div>
+                  <div class="fpga-visual-foot"><span>ready / valid</span><span>II = 1 · no stalls</span></div>
+                </div>
+              </div>
+              <div class="featured-project-details">
+                <div><span class="feature-number">01</span><h3>13,846 exact matches</h3><p>Per arithmetic core against the integer reference in the retained validation run.</p></div>
+                <div><span class="feature-number">02</span><h3>4-cycle latency</h3><p>No-stall transfer latency with one new vector accepted each cycle once the pipeline fills.</p></div>
+                <div><span class="feature-number">03</span><h3>8 vs. 1 DSP blocks</h3><p>Artix-7 DSP48E1 use for the pipeline compared with the one-multiplier serial baseline.</p></div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Validation scope</span>
+                <p>Generated an iCE40UP5K bitstream at a 12 MHz clock constraint and passed mapped-netlist functional simulation. The bitstream has not been tested on a physical board.</p>
+              </div>
+            </article>
+          </div>
+          <p class="projects-secondary-label">Additional team work</p>
           <article class="solar-project">
             <div>
               <p class="eyebrow">Embedded systems · Illini Solar Car · 2026</p>

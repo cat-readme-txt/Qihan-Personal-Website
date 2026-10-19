@@ -22,7 +22,7 @@ Open [localhost:4173](http://localhost:4173). Rebuild after editing to update th
 - `courses.css` and `courses.js`: archive layout and filters.
 - `styles.css`: layout, colors, and responsive styling.
 - `script.js`: mobile navigation and redirects for old section links.
-- `assets/`: public images and `qihan-wang-resume.pdf`.
+- `assets/`: public images, the browser-ready Chronodox demo and poster, and `qihan-wang-resume.pdf`.
 - `scripts/build.mjs`: copies the public files into `dist/` and adds `.nojekyll`.
 
 Everything in `assets/` is published, including the course files under `assets/course-materials/`. Keep other private files outside that folder. Relative asset links let the site work at either a GitHub Pages account domain or a repository subpath.

@@ -2080,3 +2080,326 @@ h1 {
     min-height: 0;
   }
 }
+
+/* Featured projects */
+.featured-projects {
+  display: grid;
+  gap: 28px;
+}
+.featured-project {
+  border: 1px solid #496353;
+  padding: 33px 38px 30px;
+}
+.featured-project--chronodox {
+  background: #1b372e;
+}
+.featured-project--fpga {
+  border-color: #d3dfd0;
+  background: var(--paper);
+  color: var(--body);
+}
+.featured-project-kicker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #496353;
+  padding-bottom: 17px;
+  color: #b4c6b5;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+.featured-project-kicker .micro-label {
+  font-size: 9px;
+}
+.featured-project--fpga .featured-project-kicker {
+  border-color: #d1dccd;
+  color: var(--muted);
+}
+.featured-project-main {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 42px;
+  align-items: center;
+  margin-top: 27px;
+}
+.featured-project-copy h2 {
+  margin: 0 0 15px;
+  font-family: var(--serif);
+  font-size: clamp(43px, 4.5vw, 63px);
+  font-weight: 400;
+  letter-spacing: -2.4px;
+  line-height: 1.08;
+}
+.featured-project--fpga h2,
+.featured-project--fpga h3,
+.featured-project--fpga .text-link {
+  color: var(--ink);
+}
+.featured-project-lede {
+  margin-bottom: 17px;
+  font-family: var(--serif);
+  font-size: 23px;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  color: #e0e9d9;
+}
+.featured-project--fpga .featured-project-lede {
+  color: #41614b;
+}
+.featured-project-description {
+  max-width: 465px;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.featured-project-attribution {
+  max-width: 440px;
+  margin-top: 13px;
+  color: #afc2b1;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.featured-project-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 25px;
+}
+.featured-project-links .text-link {
+  font-size: 11px;
+}
+.featured-project-media {
+  min-width: 0;
+  border: 1px solid #486051;
+  background: #080f12;
+}
+.featured-project-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 764;
+  background: #080f12;
+}
+.featured-project-media figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-top: 1px solid #486051;
+  padding: 13px 15px;
+  color: #b8c9b8;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.4px;
+}
+.fpga-visual {
+  display: flex;
+  flex-direction: column;
+  min-height: 375px;
+  border: 1px solid #c8d6c4;
+  background: #eaf0e5;
+}
+.fpga-visual-head,
+.fpga-visual-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #5b6c5d;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+.fpga-visual-head {
+  border-bottom: 1px solid #cfdbca;
+  padding: 16px 20px;
+}
+.fpga-visual-foot {
+  border-top: 1px solid #cfdbca;
+  padding: 15px 20px;
+}
+.fpga-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  flex: 1;
+  gap: 10px;
+  align-items: stretch;
+  padding: 22px 20px;
+}
+.fpga-stage-grid > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  border: 1px solid #d1ddcc;
+  background: #f8faf5;
+  padding: 15px 12px;
+}
+.fpga-stage-grid > div:last-child {
+  border-color: #476451;
+  background: var(--forest);
+  color: var(--paper);
+}
+.fpga-stage-grid span {
+  color: #6b806a;
+  font-family: var(--mono);
+  font-size: 9px;
+}
+.fpga-stage-grid strong {
+  margin: 19px 0 8px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.3vw, 34px);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+.fpga-stage-grid small {
+  font-size: 10px;
+  line-height: 1.5;
+}
+.fpga-stage-grid > div:last-child span,
+.fpga-stage-grid > div:last-child strong {
+  color: var(--paper);
+}
+.featured-project-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 27px;
+  border-top: 1px solid #496353;
+  margin-top: 30px;
+  padding-top: 22px;
+}
+.featured-project-details h3 {
+  margin: 8px 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+.featured-project-details p {
+  max-width: 310px;
+  font-size: 11px;
+  line-height: 1.85;
+}
+.featured-project--fpga .featured-project-details {
+  border-color: #d1dccd;
+}
+.featured-project--fpga .feature-number {
+  color: #718c69;
+}
+.featured-project-bottom {
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 16px;
+  border-top: 1px solid #496353;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+.featured-project-bottom .micro-label {
+  color: #b2c4a5;
+  font-size: 8px;
+}
+.featured-project-bottom p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.featured-project-bottom .text-link {
+  font-size: 10px;
+}
+.featured-project--fpga .featured-project-bottom {
+  border-color: #d1dccd;
+}
+.featured-project--fpga .featured-project-bottom .micro-label {
+  color: var(--muted);
+}
+.projects-secondary-label {
+  margin: 42px 0 12px;
+  color: #b2c4a5;
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.projects-section .solar-project {
+  border: 1px solid #496353;
+  background: #254337;
+  margin: 0;
+  padding: 25px 28px;
+}
+@media (max-width: 900px) {
+  .featured-project-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .featured-project-description,
+  .featured-project-attribution {
+    max-width: 650px;
+  }
+  .fpga-visual {
+    min-height: 325px;
+  }
+}
+@media (max-width: 620px) {
+  .featured-projects {
+    gap: 20px;
+  }
+  .featured-project {
+    padding: 22px 20px 24px;
+  }
+  .featured-project-kicker {
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .featured-project-main {
+    margin-top: 22px;
+  }
+  .featured-project-copy h2 {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+  .featured-project-lede {
+    font-size: 22px;
+  }
+  .featured-project-description {
+    font-size: 12px;
+  }
+  .featured-project-media figcaption {
+    flex-direction: column;
+    font-size: 7px;
+  }
+  .featured-project-details {
+    grid-template-columns: 1fr;
+    gap: 19px;
+  }
+  .featured-project-details > div {
+    padding-left: 30px;
+    position: relative;
+  }
+  .featured-project-details .feature-number {
+    position: absolute;
+    top: 6px;
+    left: 0;
+  }
+  .featured-project-details h3 {
+    margin-top: 0;
+  }
+  .featured-project-bottom {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .fpga-visual {
+    min-height: 0;
+  }
+  .fpga-stage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .fpga-stage-grid > div {
+    min-height: 123px;
+  }
+  .fpga-stage-grid strong {
+    margin-block: 12px 6px;
+  }
+  .projects-section .solar-project {
+    padding: 22px;
+  }
+}
