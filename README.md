@@ -17,8 +17,8 @@ Open [localhost:4173](http://localhost:4173). Rebuild after editing to update th
 
 - `index.html`: Home page.
 - `education.html`, `research.html`, `experience.html`, `leadership.html`, `interests.html`, `projects.html`, and `ongoing.html`: portfolio pages.
-- `courses.html`: generated course archive page.
-- `templates/courses.html` and `scripts/sync-courses.mjs`: archive template and sync script. Keep its top navigation in step with the portfolio pages before regenerating `courses.html`.
+- `courses.html`: generated course archive page with the planned course schedule.
+- `templates/courses.html` and `scripts/sync-courses.mjs`: archive template and sync script. Edit the schedule in the template as well as the current page; keep its top navigation in step with the portfolio pages before regenerating `courses.html`.
 - `courses.css` and `courses.js`: archive layout and filters.
 - `styles.css`: layout, colors, and responsive styling.
 - `script.js`: mobile navigation and redirects for old section links.
