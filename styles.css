@@ -2670,6 +2670,34 @@ h1 {
   aspect-ratio: 1600 / 976;
   background: #090d19;
 }
+.void-story-note {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  gap: 65px;
+  margin-top: 76px;
+  border-top: 1px solid #69627f;
+  border-bottom: 1px solid #69627f;
+  padding: 30px 0;
+}
+.void-story-note .micro-label {
+  color: #b8aed5;
+}
+.void-story-note h2 {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-size: clamp(27px, 3vw, 37px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.void-story-note p:not(.micro-label) {
+  font-size: 12px;
+  line-height: 1.85;
+}
+.void-story-note .text-link {
+  display: inline-flex;
+  margin-top: 20px;
+  font-size: 11px;
+}
 .void-page-section-heading {
   margin-top: 83px;
 }
@@ -2793,6 +2821,7 @@ h1 {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+  .void-story-note,
   .void-desktop-note {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -2820,8 +2849,11 @@ h1 {
   .void-page-section-heading {
     margin-top: 60px;
   }
+  .void-story-note,
   .void-desktop-note {
     margin-top: 55px;
+  }
+  .void-desktop-note {
     padding: 25px 22px;
   }
 }
