@@ -16,16 +16,16 @@ Open [localhost:4173](http://localhost:4173). Rebuild after editing to update th
 ## Edit the site
 
 - `index.html`: Home page.
-- `education.html`, `research.html`, `experience.html`, `leadership.html`, `interests.html`, `projects.html`, and `ongoing.html`: portfolio pages.
+- `education.html`, `research.html`, `experience.html`, `leadership.html`, `interests.html`, `projects.html`, `void-navigator.html`, and `ongoing.html`: portfolio pages and the dedicated VoidNavigator project page.
 - `courses.html`: generated course archive page with the planned course schedule.
 - `templates/courses.html` and `scripts/sync-courses.mjs`: archive template and sync script. Edit the schedule in the template as well as the current page; keep its top navigation in step with the portfolio pages before regenerating `courses.html`.
 - `courses.css` and `courses.js`: archive layout and filters.
 - `styles.css`: layout, colors, and responsive styling.
 - `script.js`: mobile navigation and redirects for old section links.
-- `assets/`: public images, the browser-ready Chronodox demo and poster, and `qihan-wang-resume.pdf`.
+- `assets/`: public images, browser-ready Chronodox and VoidNavigator demos and posters, and `qihan-wang-resume.pdf`.
 - `scripts/build.mjs`: copies the public files into `dist/` and adds `.nojekyll`.
 
-Everything in `assets/` is published, including the course files under `assets/course-materials/`. Keep other private files outside that folder. Relative asset links let the site work at either a GitHub Pages account domain or a repository subpath.
+The build publishes `assets/` except the local `chronodox-demo.mov` source file, including the course files under `assets/course-materials/`. Keep other private files outside that folder. Relative asset links let the site work at either a GitHub Pages account domain or a repository subpath.
 
 ### Refresh the course archive
 

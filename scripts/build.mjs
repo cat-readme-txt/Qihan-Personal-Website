@@ -4,6 +4,7 @@ import { join } from "node:path";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const output = join(root, "dist");
+const sourceMovie = join(root, "assets", "chronodox-demo.mov");
 const publicFiles = [
   "index.html",
   "education.html",
@@ -12,6 +13,7 @@ const publicFiles = [
   "leadership.html",
   "interests.html",
   "projects.html",
+  "void-navigator.html",
   "ongoing.html",
   "courses.html",
   "styles.css",
@@ -25,7 +27,10 @@ await rm(output, { recursive: true, force: true });
 await mkdir(output, { recursive: true });
 
 for (const file of publicFiles) {
-  await cp(join(root, file), join(output, file), { recursive: true });
+  await cp(join(root, file), join(output, file), {
+    recursive: true,
+    filter: (source) => source !== sourceMovie,
+  });
 }
 
 await writeFile(join(output, ".nojekyll"), "");

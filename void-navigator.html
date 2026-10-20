@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#191729" />
+    <meta
+      name="description"
+      content="VoidNavigator is Qihan Wang’s Java desktop asteroid survival game. Watch the gameplay demo and explore its Void, ship construction, and desktop build."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="VoidNavigator / Qihan Wang" />
+    <meta
+      property="og:description"
+      content="An asteroid survival game across the field and the Void. Watch the demo and explore the desktop project."
+    />
+    <meta
+      property="og:url"
+      content="https://cat-readme-txt.github.io/Qihan-Personal-Website/void-navigator.html"
+    />
+    <meta
+      property="og:image"
+      content="https://cat-readme-txt.github.io/Qihan-Personal-Website/assets/voidnavigator-demo-poster.jpg"
+    />
+    <title>VoidNavigator / Qihan Wang</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-q.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="portfolio-page void-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="./index.html" class="wordmark" aria-label="Qihan Wang, home">Q</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">+</span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="./index.html">Home</a>
+          <a href="./education.html">Education</a>
+          <a href="./research.html">Research</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./leadership.html">Leadership</a>
+          <a href="./interests.html">Skills &amp; Interests</a>
+          <a href="./projects.html" aria-current="page">Projects</a>
+          <a href="./ongoing.html">Ongoing</a>
+          <a href="./courses.html">Courses</a>
+        </nav>
+        <a
+          class="header-portfolio text-link"
+          href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Art &amp; design
+          <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="void-project-section" aria-labelledby="void-page-title">
+        <div class="section-width">
+          <div class="void-page-topline">
+            <a class="void-back-link" href="./projects.html">← All projects</a>
+            <span class="micro-label">03 / Featured project · Desktop arcade</span>
+          </div>
+
+          <div class="void-hero">
+            <div class="void-hero-copy">
+              <p class="eyebrow">Java 17 · Asteroid survival</p>
+              <h1 id="void-page-title">Void<span>Navigator<span class="title-period">.</span></span></h1>
+              <p class="void-hero-lede">Survive the field.<br />Cross into the Void.</p>
+              <p class="void-hero-description">
+                A desktop arcade game about surviving timed asteroid waves and
+                deciding when to enter a more dangerous world. Every fight can
+                earn fuel or Incident Essence; every construction changes what
+                your ship can do next.
+              </p>
+              <div class="void-hero-actions">
+                <a class="button button-void" href="#demo">Watch the demo
+                  <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg>
+                </a>
+                <a class="text-link" href="https://github.com/catREADMEtxt/AsteroidGame/tree/New-Features" target="_blank" rel="noopener noreferrer">View source
+                  <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                </a>
+              </div>
+            </div>
+            <div class="void-orbit-visual" aria-hidden="true">
+              <div class="void-orbit-field">
+                <span class="void-orbit-ring void-orbit-ring--outer"></span>
+                <span class="void-orbit-ring void-orbit-ring--middle"></span>
+                <span class="void-orbit-ring void-orbit-ring--inner"></span>
+                <span class="void-orbit-core"></span>
+                <span class="void-orbit-object void-orbit-object--one"></span>
+                <span class="void-orbit-object void-orbit-object--two"></span>
+                <span class="void-orbit-object void-orbit-object--three"></span>
+              </div>
+              <div class="void-orbit-caption"><span>FIELD / VOID</span><span>SHIFT STATE → SURVIVE</span></div>
+            </div>
+          </div>
+
+          <div class="void-fact-strip" aria-label="Project at a glance">
+            <div><span>01 / Format</span><strong>Desktop arcade</strong></div>
+            <div><span>02 / Core loop</span><strong>Survive · collect · construct</strong></div>
+            <div><span>03 / Built with</span><strong>Java 17</strong></div>
+          </div>
+
+          <figure id="demo" class="void-page-demo">
+            <div class="void-page-demo-heading"><span>Gameplay footage</span><span>01 / 01</span></div>
+            <video controls playsinline preload="none" poster="./assets/voidnavigator-demo-poster.jpg" width="1600" height="976" aria-label="VoidNavigator desktop gameplay demonstration">
+              <source src="./assets/voidnavigator-demo.mp4" type="video/mp4" />
+              Your browser cannot play this video. <a href="./assets/voidnavigator-demo.mp4">Download the demo</a>.
+            </video>
+            <figcaption><span>VOIDNAVIGATOR / DESKTOP GAMEPLAY</span><span>ASTEROIDS · CONSTRUCTION · THE VOID</span></figcaption>
+          </figure>
+
+          <div class="void-page-section-heading">
+            <p class="micro-label">The game loop</p>
+            <h2>One ship. Two kinds of danger.</h2>
+          </div>
+          <div class="void-feature-grid">
+            <article>
+              <span class="void-feature-number">01 / The field</span>
+              <h3>Keep moving.</h3>
+              <p>Survive timed levels, break apart asteroids, and collect M-AM fuel to keep the ship moving. Cosmic entities and black holes change the shape of the field as a run advances.</p>
+            </article>
+            <article>
+              <span class="void-feature-number">02 / The Void</span>
+              <h3>Change the threat.</h3>
+              <p>Cross into the Void to pass through asteroids, but face Void creatures instead. Void energy rises while you stay there, making every visit a timed choice.</p>
+            </article>
+            <article>
+              <span class="void-feature-number">03 / Construction</span>
+              <h3>Shape the ship.</h3>
+              <p>Defeated threats grant Incident Essence. Spend it on weapon nozzles, active abilities, and passive systems such as Shield and Swarm.</p>
+            </article>
+          </div>
+
+          <div class="void-desktop-note">
+            <div>
+              <p class="micro-label">Desktop project</p>
+              <h2>A desktop game from start to finish.</h2>
+            </div>
+            <div>
+              <p>VoidNavigator runs as a Java desktop application with rebindable keyboard controls and saved runs. The repository documents macOS, Windows, and portable Java build paths.</p>
+              <div class="void-note-links">
+                <a class="text-link" href="https://github.com/catREADMEtxt/AsteroidGame/blob/New-Features/README.md" target="_blank" rel="noopener noreferrer">How to run it <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+                <a class="text-link" href="https://github.com/catREADMEtxt/AsteroidGame/blob/New-Features/GAME_MECHANICS.md" target="_blank" rel="noopener noreferrer">Full mechanics <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+              </div>
+            </div>
+          </div>
+
+          <a class="void-bottom-back" href="./projects.html">← Back to all projects</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-width footer-inner">
+        <div>
+          <a class="footer-name" href="./index.html">Blake / Qihan Wang<span>.</span></a>
+          <p>Electrical Engineering · University of Illinois Urbana-Champaign</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:blakew3@illinois.edu">Email <span aria-hidden="true">↗</span></a>
+          <a href="https://github.com/cat-readme-txt" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing" target="_blank" rel="noopener noreferrer">Art &amp; design portfolio <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
