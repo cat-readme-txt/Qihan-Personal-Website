@@ -792,7 +792,7 @@ h1 {
 }
 .ongoing-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
 }
 .ongoing-card {
@@ -1073,6 +1073,9 @@ h1 {
   }
 }
 @media (max-width: 800px) {
+  .ongoing-grid {
+    grid-template-columns: 1fr;
+  }
   .header-portfolio {
     display: none;
   }
@@ -1454,9 +1457,6 @@ h1 {
   .ongoing-heading > p {
     margin-top: 12px;
     font-size: 12px;
-  }
-  .ongoing-grid {
-    grid-template-columns: 1fr;
   }
   .ongoing-card {
     padding: 23px;
