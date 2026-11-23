@@ -2,13 +2,13 @@
 
 [Visit the website](https://cat-readme-txt.github.io/Qihan-Personal-Website/)
 
-An electrical engineering portfolio covering research, projects, experience, and coursework at the University of Illinois Urbana-Champaign. My work spans FPGA design, GPU computing, embedded systems, and signal processing.
+An electrical engineering portfolio covering research, engineering, projects, and coursework at the University of Illinois Urbana-Champaign. My work spans FPGA design, GPU computing, embedded systems, and signal processing.
 
 ## Explore
 
-- [Research](https://cat-readme-txt.github.io/Qihan-Personal-Website/research.html): research experience and current interests.
+- [About](https://cat-readme-txt.github.io/Qihan-Personal-Website/about.html): education, technical skills, interests, and leadership.
+- [Work](https://cat-readme-txt.github.io/Qihan-Personal-Website/work.html): research and engineering experience.
 - [Projects](https://cat-readme-txt.github.io/Qihan-Personal-Website/projects.html): selected hardware and software projects.
-- [Ongoing work](https://cat-readme-txt.github.io/Qihan-Personal-Website/ongoing.html): projects in progress.
 - [Courses](https://cat-readme-txt.github.io/Qihan-Personal-Website/courses.html): course plan and materials.
 
 ## Run locally

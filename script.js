@@ -4,18 +4,19 @@ const pageName = window.location.pathname.split("/").at(-1);
 if (pageName === "" || pageName === "index.html") {
   const anchor = window.location.hash.slice(1);
   const legacyPages = {
-    education: "education.html",
-    research: "research.html",
-    experience: "experience.html",
-    leadership: "leadership.html",
-    interests: "interests.html",
+    education: "about.html",
+    research: "work.html",
+    experience: "work.html",
+    leadership: "about.html",
+    interests: "about.html",
+    skills: "about.html",
     projects: "projects.html",
-    ongoing: "ongoing.html",
+    ongoing: "work.html",
   };
   const target = legacyPages[anchor] ||
-    (anchor.startsWith("ongoing-") ? "ongoing.html" : null);
+    (anchor.startsWith("ongoing-") ? "work.html" : null);
   if (target) {
-    window.location.replace(`./${target}${anchor.startsWith("ongoing-") ? window.location.hash : ""}`);
+    window.location.replace(`./${target}${anchor === "ongoing" ? "#current-work" : window.location.hash}`);
   }
 }
 

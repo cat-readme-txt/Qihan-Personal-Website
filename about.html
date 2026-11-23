@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f7f2" />
+    <meta
+      name="description"
+      content="Qihan Wang’s education, technical interests, skills, and leadership."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="About / Qihan Wang"
+    />
+    <meta
+      property="og:description"
+      content="Qihan Wang’s education, technical interests, skills, and leadership."
+    />
+    <meta
+      property="og:url"
+      content="https://cat-readme-txt.github.io/Qihan-Personal-Website/about.html"
+    />
+    <title>About / Qihan Wang</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon-q.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body class="portfolio-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <svg
+      class="icon-definitions"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <symbol id="arrow-up-right" viewBox="0 0 24 24">
+        <path d="M6 18 18 6M6 6h12v12" />
+      </symbol>
+      <symbol id="arrow-right" viewBox="0 0 24 24">
+        <path d="M4 12h16m-6-6 6 6-6 6" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 24 24">
+        <path d="M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5" />
+      </symbol>
+    </svg>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="./index.html" class="wordmark" aria-label="Qihan Wang, home"
+          >Q</a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">+</span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-navigation"
+          aria-label="Main navigation"
+        >
+          <a href="./index.html">Home</a>
+          <a href="./about.html" aria-current="page">About</a>
+          <a href="./work.html">Work</a>
+          <a href="./projects.html">Projects</a>
+          <a href="./courses.html">Courses</a>
+        </nav>
+        <a
+          class="header-portfolio text-link"
+          href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Art &amp; design
+          <svg class="icon" aria-hidden="true">
+            <use href="#arrow-up-right" /></svg
+        ></a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="about" class="section education-section" aria-labelledby="about-heading">
+        <div class="section-width">
+          <div class="section-heading">
+            <h1 id="about-heading"><span class="section-number">01 /</span> About</h1>
+            <span class="section-note">Education · interests · leadership</span>
+          </div>
+          <nav class="section-jumps" aria-label="About sections"><a href="#education">Education</a><a href="#interests">Interests &amp; skills</a><a href="#leadership">Leadership &amp; service</a></nav>
+          <div id="education" class="education-feature">
+            <div class="education-feature-copy">
+              <p class="eyebrow">University of Illinois Urbana-Champaign</p>
+              <h2>B.S. in<br />Electrical Engineering<span class="title-period">.</span></h2>
+              <p>I'm studying circuits, computing, and mathematics. My current coursework includes differential equations, linear algebra, discrete structures, and introductory electronics. I expect to graduate in May 2029.</p>
+            </div>
+            <div class="education-year" aria-label="Expected graduation May 2029">
+              <span class="micro-label">Expected graduation</span>
+              <strong>May<br />2029</strong>
+              <span>Urbana–Champaign, Illinois</span>
+            </div>
+          </div>
+          <div class="education-route-grid" aria-label="Explore my studies">
+            <a href="./courses.html#study-plan"><span class="micro-label">Course planning</span><strong>Planned schedule</strong><span>EE major · CS and Math minors planned</span><svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+            <a href="./courses.html#archive"><span class="micro-label">Study archive</span><strong>Notes &amp; materials</strong><span>Browse files by course and category</span><svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+          </div>
+        </div>
+      </section>
+      <section id="interests" class="section section-width about-interests" aria-labelledby="interests-heading">
+        <div class="section-heading"><h2 id="interests-heading">Interests</h2><span class="section-note">What I build toward</span></div>
+        <p class="about-section-intro">I work at the boundary of hardware and software, especially computer architecture, GPU computing, embedded systems, and signal processing. Brain–computer interfaces remain a longer-term interest.</p>
+        <div id="skills" class="skills-heading"><div><p class="eyebrow">Working toolkit</p><h2>Technical skills</h2></div></div>
+        <div class="skills-list" aria-label="Technical skills">
+          <div><h3>Languages</h3><p>C/C++ · Python · SystemVerilog · Verilog · Bash · TypeScript · JavaScript · Java · SQL</p></div>
+          <div><h3>Hardware &amp; embedded</h3><p>RTL · FPGA synthesis · cocotb · Yosys · nextpnr · KiCad · Zephyr RTOS · MCUXpresso</p></div>
+          <div><h3>GPU &amp; scientific computing</h3><p>CUDA C++ · FP64 numerical validation · CUDA event timing · CMake · Slurm · Linux</p></div>
+          <div><h3>ML &amp; signal processing</h3><p>PyTorch · NumPy · SciPy · scikit-learn · MNE · PyWavelets · CSP/FBCSP · Qiskit · Stim</p></div>
+          <div><h3>Web &amp; applications</h3><p>React · Zustand · Vite · Node.js · Canvas2D · HTML/CSS · Java Swing</p></div>
+        </div>
+      </section>
+      <section id="leadership" class="section section-width about-leadership" aria-labelledby="leadership-heading">
+        <div class="section-heading"><h2 id="leadership-heading">Leadership &amp; service</h2><span class="section-note">Teaching · teams · outreach</span></div>
+        <div class="about-card-grid">
+          <article><p class="micro-label">2025–2026 · Steel City Codes</p><h3>National Program Director</h3><p>Coordinated curriculum, outreach, and programming education across a national chapter network. Digital outreach content reached approximately 50,000 views.</p></article>
+          <article><p class="micro-label">2022–2026 · Clements NJROTC</p><h3>Company Master Chief</h3><p>Led and mentored a company of more than 100 cadets, including weekly physical training and subject-matched tutoring.</p></article>
+          <article><p class="micro-label">2025–2026 · Logic Club</p><h3>Founder &amp; president</h3><p>Created study material on logic, proofs, circuits, algorithms, and quantum computing.</p></article>
+          <article><p class="micro-label">2022–present · Community teaching</p><h3>STEM &amp; piano tutoring</h3><p>Taught AP Physics and Algebra II one on one, and provided free piano instruction through Note Love.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-width footer-inner">
+        <div>
+          <a class="footer-name" href="./index.html"
+            >Blake / Qihan Wang<span>.</span></a
+          >
+          <p>
+            Electrical Engineering · University of Illinois Urbana-Champaign
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:blakew3@illinois.edu"
+            >Email <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://github.com/cat-readme-txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub <span aria-hidden="true">↗</span></a
+          ><a
+            href="https://drive.google.com/drive/folders/1IvQVaiLnGWzwQyQeIKtFbTwJ9TXxJZBa?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Art &amp; design portfolio <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

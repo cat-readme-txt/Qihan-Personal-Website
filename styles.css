@@ -15,6 +15,7 @@
     -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -2855,5 +2856,195 @@ h1 {
   }
   .void-desktop-note {
     padding: 25px 22px;
+  }
+}
+
+/* Consolidated About, Work, and project summaries. */
+.section-jumps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: -20px 0 32px;
+}
+.section-jumps a {
+  border: 1px solid #b9cbb8;
+  border-radius: 2px;
+  color: var(--ink);
+  font-size: 14px;
+  padding: 6px 13px;
+}
+.section-jumps a:hover {
+  background: #eaf0e5;
+}
+body {
+  font-size: 16px;
+}
+.site-navigation a {
+  font-size: 14px;
+}
+.about-interests,
+.about-leadership {
+  padding-bottom: 82px;
+}
+.about-interests .section-heading h2,
+.about-leadership .section-heading h2,
+.work-subheading h2 {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(32px, 3.8vw, 46px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+.about-section-intro,
+.work-lede {
+  max-width: 850px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(21px, 2.4vw, 30px);
+  line-height: 1.5;
+}
+.about-interests .skills-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.about-interests .skills-list > div,
+.about-card-grid > article {
+  border: 1px solid #d2dccd;
+  background: var(--paper);
+  padding: 24px;
+}
+.about-interests .skills-list h3,
+.about-card-grid h3 {
+  margin-bottom: 10px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: 400;
+}
+.about-interests .skills-list p,
+.about-card-grid article > p:last-child {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.about-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.about-card-grid .micro-label {
+  margin-bottom: 13px;
+}
+.work-lede {
+  margin-bottom: 48px;
+}
+.work-subheading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid var(--line);
+  padding: 26px 0 20px;
+}
+.work-subheading p {
+  color: var(--muted);
+  font-size: 14px;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.work-card {
+  min-width: 0;
+  border: 1px solid #d3dccf;
+  background: var(--paper);
+  padding: clamp(23px, 3vw, 34px);
+}
+.work-card h3 {
+  margin: 14px 0 16px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.5vw, 33px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+.work-card > p:not(.micro-label),
+.work-card .text-link {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.work-card .work-evidence {
+  border-top: 1px solid var(--line);
+  margin-top: 18px;
+  padding-top: 16px;
+}
+.work-card .text-link {
+  margin-top: 18px;
+}
+.work-figure {
+  max-width: 720px;
+  margin: 8px 0 56px;
+}
+.work-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
+.work-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.project-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.project-summary-card {
+  border: 1px solid #496353;
+  background: #254337;
+  padding: clamp(23px, 3vw, 34px);
+}
+.project-summary-card h2 {
+  margin: 14px 0;
+  font-family: var(--serif);
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+.project-summary-card > p:not(.micro-label) {
+  font-size: 16px;
+  line-height: 1.7;
+}
+.project-summary-card .project-evidence {
+  border-top: 1px solid #496353;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+.featured-project--void .featured-project-media img,
+.void-page-demo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1600 / 976;
+  object-fit: cover;
+}
+@media (max-width: 760px) {
+  .work-grid,
+  .project-summary-grid,
+  .about-card-grid,
+  .about-interests .skills-list {
+    grid-template-columns: 1fr;
+  }
+  .work-subheading {
+    display: block;
+  }
+  .work-subheading p {
+    margin-top: 4px;
   }
 }

@@ -7,6 +7,8 @@ const output = join(root, "dist");
 const sourceMovie = join(root, "assets", "chronodox-demo.mov");
 const publicFiles = [
   "index.html",
+  "about.html",
+  "work.html",
   "education.html",
   "research.html",
   "experience.html",
