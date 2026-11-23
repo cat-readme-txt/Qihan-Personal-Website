@@ -86,44 +86,48 @@
         <div class="section-width">
           <div class="section-heading"><h1 id="work-heading"><span class="section-number">02 /</span> Work</h1><span class="section-note">Research · engineering · current work</span></div>
           <nav class="section-jumps" aria-label="Work sections"><a href="#research">Research</a><a href="#experience">Engineering</a></nav>
-          <p id="current-work" class="work-lede">Research and engineering work across computational physics, computer music, EEG analysis, and vehicle electronics.</p>
-          <div id="research" class="work-subheading"><h2>Research</h2><p>Methods, validation, and systems work</p></div>
-          <div class="work-grid">
-            <article id="ongoing-nuclear" class="work-card">
-              <p class="micro-label">Oct. 2026–present · Dr. Soham Pal · UIUC</p><h3>Nuclear pasta simulation</h3>
-              <p>Implemented an FP64 CUDA all-pairs force kernel for dense nuclear matter, with periodic boundaries, screened Coulomb interactions, and shifted-force cutoffs. Built a velocity-Verlet CPU reference with reproducible checkpoints and CPU/GPU agreement checks.</p>
-              <p class="work-evidence">In documented CPU tests, 60 force gradients passed finite-difference checks, relative momentum drift stayed below 10<sup>−14</sup>, and reversal error stayed below 10<sup>−9</sup> fm.</p>
-            </article>
-            <article id="ongoing-dissco" class="work-card">
-              <p class="micro-label">Nov. 2026–present · Professor Sever Tipei · UIUC</p><h3>DISSCO / LASS CUDA filtering</h3>
-              <p>Implemented an optional CUDA backend for sound-level biquad filters, using 256-sample chunks and parallel state propagation for recursive IIR processing. Added GPU selection, asynchronous transfers, and automatic CPU fallback.</p>
-              <p class="work-evidence">Checked 65,539-sample signals against the CPU recurrence and public multichannel API. Matched Release benchmarks on NCSA Delta showed execution-time gains for tested workloads; complete-render acceleration remains a separate target.</p>
-              <a class="text-link" href="https://github.com/cmp-illinois/DISSCO" target="_blank" rel="noopener noreferrer">DISSCO source</a>
-            </article>
-            <article class="work-card">
-              <p class="micro-label">2026 · Independent research</p><h3>Resource-constrained EEG classification</h3>
-              <p>Built separate motor execution and imagery benchmarks using acquisition records for 109 participants per task. Compared band power, Hjorth parameters, wavelet energy, CSP, and filter-bank CSP with shrinkage LDA.</p>
-              <p class="work-evidence">Evaluated subject transfer, calibration, shorter windows, fewer channels, and 16 noise or artifact scenarios. Kept compute latency separate from total decision delay.</p>
-              <a class="text-link" href="https://github.com/cat-readme-txt/EEG-Analysis" target="_blank" rel="noopener noreferrer">EEG repository</a>
-            </article>
-            <article class="work-card">
-              <p class="micro-label">Summer 2025 · Dr. Weidong Shi · University of Houston</p><h3>LLM reasoning evaluation</h3>
-              <p>Developed a repeated-trial benchmark across biology, mathematics, and law. Implemented response normalization, scoring, retry handling, and agreement measures including ICC and Krippendorff’s alpha.</p>
-            </article>
-          </div>
-          <figure class="work-figure"><a href="./assets/eeg-channel-reduction.png" target="_blank" rel="noopener" aria-label="Open full-size EEG channel reduction figure"><img src="./assets/eeg-channel-reduction.png" alt="EEG benchmark comparing mean leave-one-subject-out accuracy across electrode counts for motor execution and imagery." width="1580" height="940" loading="lazy" /></a><figcaption>EEG benchmark: channel count versus mean leave-one-subject-out accuracy across evaluated pipelines. Dashed line: 50% chance.</figcaption></figure>
-          <div id="experience" class="work-subheading"><h2>Engineering</h2><p>Hardware and applied systems</p></div>
-          <div class="work-grid">
-            <article id="ongoing-solar-car" class="work-card">
-              <p class="micro-label">Sept. 2026–present · Illini Solar Car</p><h3>HIL sensors &amp; PCB development</h3>
-              <p>Designed a KiCad HIL schematic for brake outputs and main-current sensor voltage emulation, including a dual 12-bit DAC and independently enabled 3.3 V brake channels. Reviewed blind-spot sensor footprints and BOM dependencies, evaluated weather-resistant obstacle sensors, and set up a Zephyr environment for HIL integration.</p>
-              <p class="work-evidence">Schematic and firmware development work; hardware integration and physical validation are still in progress.</p>
-            </article>
-            <article class="work-card">
-              <p class="micro-label">2026 · Hardware prototyping</p><h3>PCB &amp; firmware practice</h3>
-              <p>Designed an LED and resistor PCB and implemented potentiometer-controlled LED brightness in MCUXpresso IDE.</p>
-            </article>
-          </div>
+          <div id="current-work" class="work-intro"><p class="eyebrow">Research and engineering</p><p>From physical models and audio filters to EEG analysis and vehicle electronics, I build a reference, test the result, and then look for the part that needs better hardware or software.</p></div>
+          <div id="research" class="work-chapter"><span class="micro-label">Research</span><h2>Models, signals, and computation</h2></div>
+          <article id="ongoing-nuclear" class="work-story" aria-labelledby="nuclear-heading">
+            <div class="work-story-copy">
+              <p class="eyebrow">Oct. 2026–present · Dr. Soham Pal · UIUC</p>
+              <h3 id="nuclear-heading">Nuclear pasta simulation</h3>
+              <p>Dense nuclear matter needs a force model that behaves consistently at periodic boundaries and cutoffs. I built an FP64 CUDA all-pairs kernel with two-Gaussian nuclear interactions, screened Coulomb forces, and shifted-force cutoffs.</p>
+              <p>The C++20 CPU reference uses seeded initial conditions, NVE velocity Verlet, energy and momentum logs, and lossless checkpoints. It provides the numerical baseline for GPU agreement work.</p>
+              <a class="text-link" href="https://github.com/cat-readme-txt/CUDA-Nuclear-Pasta-Simulation-Project" target="_blank" rel="noopener noreferrer">Source &amp; validation notes <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+            </div>
+            <div class="work-story-aside work-story-aside--forest">
+              <p class="micro-label">Documented CPU validation</p>
+              <div class="work-measure"><strong>60</strong><span>analytic force gradients checked against finite differences</span></div>
+              <div class="work-measure"><strong>1.984</strong><span>fitted timestep-error scaling in the local N=200 sweep</span></div>
+              <p class="work-aside-note">Relative momentum drift stayed below 10<sup>−14</sup>; 10,000-step reversal error stayed below 10<sup>−9</sup> fm. GPU agreement and profiling remain target-platform checks.</p>
+            </div>
+          </article>
+          <article id="ongoing-dissco" class="work-story work-story--reverse" aria-labelledby="dissco-heading">
+            <div class="work-story-copy">
+              <p class="eyebrow">Nov. 2026–present · Professor Sever Tipei · UIUC</p>
+              <h3 id="dissco-heading">DISSCO / LASS CUDA filtering</h3>
+              <p>Recursive IIR filters carry state between samples, so I split sound-level biquad filtering into 256-sample chunks. Affine state summaries propagate each chunk’s boundary state before parallel evaluation on the GPU.</p>
+              <p>The optional CUDA build adds GPU selection, asynchronous transfers, RAII resource handling, and automatic CPU fallback. This work supports DISSCO’s larger additive-synthesis rendering path.</p>
+              <a class="text-link" href="https://github.com/cmp-illinois/DISSCO" target="_blank" rel="noopener noreferrer">DISSCO source <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+            </div>
+            <div class="work-story-aside work-story-aside--diagram" aria-label="Biquad filter pipeline">
+              <p class="micro-label">Filter path</p>
+              <ol class="method-flow"><li><span>01</span> Split into 256-sample chunks</li><li><span>02</span> Propagate boundary states</li><li><span>03</span> Evaluate chunks in parallel</li><li><span>04</span> Fall back to CPU when needed</li></ol>
+              <p class="work-aside-note">Checked 65,539-sample signals against the CPU recurrence and multichannel API. Matched Release tests on NCSA Delta showed gains for tested workloads; complete-render acceleration is a separate target.</p>
+            </div>
+          </article>
+          <article class="work-eeg" aria-labelledby="eeg-heading">
+            <div class="work-eeg-copy"><p class="eyebrow">2026 · Independent research</p><h3 id="eeg-heading">Resource-constrained EEG classification</h3><p>Can lightweight classifiers distinguish real and imagined left/right fist movement for people absent from training? I compared spectral, temporal, wavelet, CSP, and filter-bank CSP features with shrinkage LDA.</p><p>Separate execution and imagery benchmarks used acquisition records for 109 subjects per task. The historical local study tested subject transfer, calibration, channel reduction, shorter windows, and 16 artifact or noise scenarios. Follow-up validation is documented separately in the repository.</p><a class="text-link" href="https://github.com/cat-readme-txt/EEG-Analysis" target="_blank" rel="noopener noreferrer">Study repository <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div>
+            <figure><a href="./assets/eeg-channel-reduction.png" target="_blank" rel="noopener" aria-label="Open full-size EEG channel reduction figure"><img src="./assets/eeg-channel-reduction.png" alt="EEG benchmark comparing mean leave-one-subject-out accuracy across electrode counts for motor execution and imagery." width="1580" height="940" loading="lazy" /></a><figcaption>Historical local benchmark · Mean leave-one-subject-out accuracy by channel count. Dashed line: 50% chance.</figcaption></figure>
+          </article>
+          <div class="work-brief"><span class="micro-label">Summer 2025 / University of Houston</span><div><h3>LLM reasoning evaluation</h3><p>With Dr. Weidong Shi, I built a repeated-trial Python benchmark across biology, mathematics, and law. Response normalization, per-question scoring, retry handling, ICC, and Krippendorff’s alpha supported comparisons across model runs.</p></div></div>
+          <div id="experience" class="work-chapter"><span class="micro-label">Engineering</span><h2>Interfaces and physical systems</h2></div>
+          <article id="ongoing-solar-car" class="work-story work-story--solar" aria-labelledby="solar-heading">
+            <div class="work-story-copy"><p class="eyebrow">Sept. 2026–present · Illini Solar Car</p><h3 id="solar-heading">HIL sensors &amp; PCB development</h3><p>I designed a KiCad schematic to emulate brake outputs and main-current sensor voltage for hardware-in-the-loop tests. It specifies a dual 12-bit DAC with a 2.5 V reference and nominal 0–5 V output, plus independently enabled 3.3 V brake channels.</p><p>I also reviewed blind-spot sensor footprint and BOM dependencies, evaluated weather-resistant obstacle sensors, and configured a Zephyr environment for integration. Electrical choices and physical validation remain in progress.</p></div>
+            <div class="work-story-aside work-story-aside--solar"><p class="micro-label">HIL interface · schematic stage</p><div class="signal-path"><div><span>Analog emulation</span><strong>12-bit DAC</strong><small>Current-sensor output</small></div><div><span>Digital emulation</span><strong>3.3 V</strong><small>Enabled brake channels</small></div><div><span>Integration</span><strong>Zephyr</strong><small>Firmware environment</small></div></div><p class="work-aside-note">Schematic and firmware development are documented here; this is not a hardware validation result.</p></div>
+          </article>
+          <div class="work-brief"><span class="micro-label">2026 / Hardware prototyping</span><div><h3>PCB &amp; firmware practice</h3><p>Designed an LED and resistor PCB in KiCad and implemented potentiometer-controlled LED brightness in MCUXpresso IDE.</p></div></div>
         </div>
       </section>
     </main>

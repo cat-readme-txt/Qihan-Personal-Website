@@ -256,52 +256,20 @@
               </div>
             </article>
           </div>
-          <p class="projects-secondary-label">More hardware, research, and software projects</p>
-          <div class="project-summary-grid">
-            <article class="project-summary-card">
-              <p class="micro-label">Quantum computing · HackMidwest · 2026</p>
-              <h2>ML-assisted quantum decoder</h2>
-              <p>Built a hybrid decoder for the Gross [[144,12,12]] code using seeded PriorTilt candidates, Relay-BP escalation, neural candidate selection, and learned priors. The project placed second in the Infleqtion Challenge 1 track.</p>
-              <p class="project-evidence">In saved-shot tests at p = 0.005, the frozen hierarchy reduced failed pairs from 845 to 479 per 10,000 versus Relay-BP and mean pair latency from 1,471 to 825 ms. These are local evaluation results.</p>
-            </article>
-            <article class="project-summary-card">
-              <p class="micro-label">Quantum hardware · Qiskit · 2026</p>
-              <h2>Repeated parity checks</h2>
-              <p>Implemented a three-data-qubit bit-flip memory with repeated ancilla measurements, controlled errors, and syndrome-history decoding. Ran 63 circuits and 32,256 shots on ibm_fez; compared topology-aware and faster-measurement variants on the same five physical qubits.</p>
-            </article>
-            <article class="project-summary-card">
-              <p class="micro-label">FPGA · Verilog · 2026</p>
-              <h2>Decoder-router prototype</h2>
-              <p>Built a four-stage, fixed-point routing core with 16 input features and a 123-byte packet front end. Integrated UART modules and prepared reproducible host-side test vectors from 300 simulated X-memory shots.</p>
-            </article>
-            <article class="project-summary-card">
-              <p class="micro-label">Applied ML · DSDG hackathon · 2026</p>
-              <h2>Supply-chain forecasting</h2>
-              <p>Combined demand, supplier, price, shipping, tariff, and news data for disruption forecasts. Built lean and insured purchasing policies with capacity and inventory constraints; achieved a Phase 1 public score of 67.74.</p>
-            </article>
-            <article class="project-summary-card">
-              <p class="micro-label">Education · JavaScript · 2026</p>
-              <h2>Math-ter</h2>
-              <p>Built a browser-based number-sense practice tool with 71 topics, worked lessons, generated exercises, progress tracking, and offline use.</p>
-            </article>
-            <article class="project-summary-card">
-              <p class="micro-label">Systems · Bash · 2026</p>
-              <h2>Linux hardening toolkit</h2>
-              <p>Implemented 25 hardening and audit sections with timestamped backups, machine-readable logs, and selective rollback across common Linux distribution families.</p>
-            </article>
-          </div>
-          <p class="projects-secondary-label">Team work</p>
-          <article class="solar-project">
-            <div>
-              <p class="eyebrow">Embedded systems · Illini Solar Car · 2026</p>
-              <h2>PCB and firmware work</h2>
-            </div>
-            <p>
-              Designed an LED and resistor PCB in KiCad, then implemented
-              potentiometer-controlled LED brightness in MCUXpresso IDE.
-              Current HIL and sensors work is detailed in <a href="./work.html#ongoing-solar-car">Work</a>.
-            </p>
+
+          <div class="project-collection-heading"><p class="eyebrow">Selected systems · 2026</p><h2>More from the workbench<span class="title-period">.</span></h2><p>Quantum error correction, digital hardware, forecasting, and tools built for other people to use.</p></div>
+          <article class="decoder-spotlight" aria-labelledby="decoder-heading">
+            <div class="decoder-spotlight-copy"><p class="micro-label">Quantum computing · HackMidwest / Infleqtion</p><h2 id="decoder-heading">ML-assisted quantum decoder</h2><p class="decoder-intro">A decoder must recover useful quantum information from a pattern of noisy checks. I built a hierarchy for the Gross [[144,12,12]] code that sends most shots through fast candidates and escalates harder ones.</p><p>Two independently seeded PriorTilt candidates, Relay-BP fallback, and a learned candidate selector work together with priors for 8,784 circuit-error mechanisms. The project placed second in the Infleqtion Challenge 1 track.</p><a class="text-link" href="https://github.com/Trade42/HackMidwest/tree/main/challenge-1-ml-decoder-kit/report" target="_blank" rel="noopener noreferrer">Results &amp; reproduction <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div>
+            <div class="decoder-spotlight-visual"><p class="micro-label">Decision path · software pipeline</p><ol><li><span>Input</span><strong>936 detector bits</strong></li><li><span>Fast candidates</span><strong>2 × PriorTilt</strong></li><li><span>If they agree</span><strong>Keep the prediction</strong></li><li><span>If they disagree</span><strong>Relay-BP + learned selection</strong></li></ol><p>The selected candidate’s logical flips are scored against saved Stim shots during evaluation.</p></div>
+            <div class="decoder-results"><div><span>Failed pairs / 10,000</span><strong>845 <em>→</em> 479</strong><small>Full Relay-BP → hierarchy</small></div><div><span>Mean pair latency</span><strong>1,471 <em>→</em> 825 <small>ms</small></strong><small>Full Relay-BP → hierarchy</small></div><p>Saved-shot test at p = 0.005. The hierarchy was frozen before test evaluation; these are local software results.</p></div>
           </article>
+          <div class="project-index" aria-label="Additional projects">
+            <article><div class="project-index-meta"><span>Quantum hardware</span><span>2026</span></div><div class="project-index-body"><h2>Repeated parity checks</h2><p>Built a three-data-qubit bit-flip memory with repeated ancilla measurements, controlled errors, sham-check controls, and syndrome-history decoding. A 63-circuit comparison ran 32,256 shots on ibm_fez using the same five physical qubits across variants.</p><a class="text-link" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker" target="_blank" rel="noopener noreferrer">Study &amp; shot records <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div><div class="project-index-result"><strong>32,256</strong><span>hardware shots</span></div></article>
+            <article><div class="project-index-meta"><span>FPGA / Verilog</span><span>2026</span></div><div class="project-index-body"><h2>Decoder-router prototype</h2><p>A four-stage fixed-point router scores 17 features derived from saved quantum-memory syndromes and the first software decode. A 124-byte UART packet carries the input; RTL simulation agreed with the Python decision on 5,000 saved validation shots. Physical board replay is still pending.</p><a class="text-link" href="https://github.com/Trade42/HackMidwest/tree/fpga/fpga_board" target="_blank" rel="noopener noreferrer">FPGA demo source <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div><div class="project-index-result"><strong>5,000</strong><span>saved-shot RTL checks</span></div></article>
+            <article><div class="project-index-meta"><span>Applied ML / optimization</span><span>2026</span></div><div class="project-index-body"><h2>Supply-chain forecasting</h2><p>Combined demand, supplier, price, shipping, tariff, and news data for disruption forecasts. Lean and insured purchasing policies balance cost, capacity, and shortage risk; the selected final pair each scored 89.45 on the released public weeks.</p><a class="text-link" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026" target="_blank" rel="noopener noreferrer">Methods &amp; submissions <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div><div class="project-index-result"><strong>89.45</strong><span>public score · private unknown</span></div></article>
+            <article><div class="project-index-meta"><span>Education / JavaScript</span><span>2026</span></div><div class="project-index-body"><h2>Math-ter</h2><p>A browser-based number-sense course with 71 topics in six categories. Worked lessons lead into generated exercises at three difficulty levels; local progress and a service worker make practice available offline after the first load.</p><a class="text-link" href="https://github.com/cat-readme-txt/Math-ter" target="_blank" rel="noopener noreferrer">Explore Math-ter <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div><div class="project-index-result"><strong>71</strong><span>learning topics</span></div></article>
+            <article><div class="project-index-meta"><span>Systems / Bash</span><span>2026</span></div><div class="project-index-body"><h2>Linux hardening toolkit</h2><p>Twenty-five audit and hardening sections cover accounts, SSH, firewalls, services, permissions, and logging. Timestamped backups, action logs, and selective rollback make changes inspectable.</p></div><div class="project-index-result"><strong>25</strong><span>audit sections</span></div></article>
+          </div>
         </div>
       </section>
     </main>

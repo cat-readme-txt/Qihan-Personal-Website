@@ -88,12 +88,14 @@
             <h1 id="about-heading"><span class="section-number">01 /</span> About</h1>
             <span class="section-note">Education · interests · leadership</span>
           </div>
-          <nav class="section-jumps" aria-label="About sections"><a href="#education">Education</a><a href="#interests">Interests &amp; skills</a><a href="#leadership">Leadership &amp; service</a></nav>
+          <nav class="section-jumps" aria-label="About sections">
+            <a href="#education">Education</a><a href="#interests">Interests &amp; skills</a><a href="#leadership">Leadership &amp; service</a>
+          </nav>
           <div id="education" class="education-feature">
             <div class="education-feature-copy">
               <p class="eyebrow">University of Illinois Urbana-Champaign</p>
               <h2>B.S. in<br />Electrical Engineering<span class="title-period">.</span></h2>
-              <p>I'm studying circuits, computing, and mathematics. My current coursework includes differential equations, linear algebra, discrete structures, and introductory electronics. I expect to graduate in May 2029.</p>
+              <p>I study circuits, computing, and mathematics. Current coursework includes differential equations, linear algebra, discrete structures, and introductory electronics. CS and Math minors are planned.</p>
             </div>
             <div class="education-year" aria-label="Expected graduation May 2029">
               <span class="micro-label">Expected graduation</span>
@@ -107,25 +109,41 @@
           </div>
         </div>
       </section>
-      <section id="interests" class="section section-width about-interests" aria-labelledby="interests-heading">
-        <div class="section-heading"><h2 id="interests-heading">Interests</h2><span class="section-note">What I build toward</span></div>
-        <p class="about-section-intro">I work at the boundary of hardware and software, especially computer architecture, GPU computing, embedded systems, and signal processing. Brain–computer interfaces remain a longer-term interest.</p>
-        <div id="skills" class="skills-heading"><div><p class="eyebrow">Working toolkit</p><h2>Technical skills</h2></div></div>
-        <div class="skills-list" aria-label="Technical skills">
-          <div><h3>Languages</h3><p>C/C++ · Python · SystemVerilog · Verilog · Bash · TypeScript · JavaScript · Java · SQL</p></div>
-          <div><h3>Hardware &amp; embedded</h3><p>RTL · FPGA synthesis · cocotb · Yosys · nextpnr · KiCad · Zephyr RTOS · MCUXpresso</p></div>
-          <div><h3>GPU &amp; scientific computing</h3><p>CUDA C++ · FP64 numerical validation · CUDA event timing · CMake · Slurm · Linux</p></div>
-          <div><h3>ML &amp; signal processing</h3><p>PyTorch · NumPy · SciPy · scikit-learn · MNE · PyWavelets · CSP/FBCSP · Qiskit · Stim</p></div>
-          <div><h3>Web &amp; applications</h3><p>React · Zustand · Vite · Node.js · Canvas2D · HTML/CSS · Java Swing</p></div>
+      <section id="interests" class="section about-interests" aria-labelledby="interests-heading">
+        <div class="section-width">
+          <div class="section-heading"><h2 id="interests-heading">Interests &amp; skills</h2><span class="section-note">What connects the work</span></div>
+          <div class="about-interest-intro">
+            <p class="eyebrow">Where I focus</p>
+            <p>I’m interested in systems where the hardware, algorithms, and measurements all matter. That has led me from FPGA arithmetic to CUDA simulation and signal analysis.</p>
+          </div>
+          <div class="focus-lines" aria-label="Current technical interests">
+            <div><span>Computing systems</span><p>Computer architecture, GPU computing, and hardware–software co-design.</p><a href="./projects.html#project-fpga">FPGA project <span aria-hidden="true">↗</span></a></div>
+            <div><span>Signals &amp; inference</span><p>EEG motor classification, audio processing, and machine learning for error correction.</p><a href="./work.html#research">Research work <span aria-hidden="true">↗</span></a></div>
+            <div><span>Embedded engineering</span><p>Digital hardware, sensor interfaces, and real-world validation. Brain–computer interfaces are a longer-term interest.</p><a href="./work.html#experience">Engineering work <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div id="skills" class="skills-heading"><div><p class="eyebrow">Working toolkit</p><h2>Technical skills</h2></div><span>Selected tools used in the work above</span></div>
+          <dl class="skill-index">
+            <div><dt>Languages</dt><dd>C/C++ · Python · SystemVerilog · Verilog · Bash · TypeScript · JavaScript · Java · SQL</dd></div>
+            <div><dt>Hardware &amp; embedded</dt><dd>RTL · FPGA synthesis · cocotb · Yosys · nextpnr · KiCad · Zephyr RTOS · MCUXpresso</dd></div>
+            <div><dt>GPU &amp; scientific computing</dt><dd>CUDA C++ · FP64 numerical validation · CUDA event timing · CMake · Slurm · Linux</dd></div>
+            <div><dt>ML &amp; signal processing</dt><dd>PyTorch · NumPy · SciPy · scikit-learn · MNE · PyWavelets · CSP/FBCSP · Qiskit · Stim</dd></div>
+            <div><dt>Web &amp; applications</dt><dd>React · Zustand · Vite · Node.js · Canvas2D · HTML/CSS · Java Swing</dd></div>
+          </dl>
         </div>
       </section>
-      <section id="leadership" class="section section-width about-leadership" aria-labelledby="leadership-heading">
-        <div class="section-heading"><h2 id="leadership-heading">Leadership &amp; service</h2><span class="section-note">Teaching · teams · outreach</span></div>
-        <div class="about-card-grid">
-          <article><p class="micro-label">2025–2026 · Steel City Codes</p><h3>National Program Director</h3><p>Coordinated curriculum, outreach, and programming education across a national chapter network. Digital outreach content reached approximately 50,000 views.</p></article>
-          <article><p class="micro-label">2022–2026 · Clements NJROTC</p><h3>Company Master Chief</h3><p>Led and mentored a company of more than 100 cadets, including weekly physical training and subject-matched tutoring.</p></article>
-          <article><p class="micro-label">2025–2026 · Logic Club</p><h3>Founder &amp; president</h3><p>Created study material on logic, proofs, circuits, algorithms, and quantum computing.</p></article>
-          <article><p class="micro-label">2022–present · Community teaching</p><h3>STEM &amp; piano tutoring</h3><p>Taught AP Physics and Algebra II one on one, and provided free piano instruction through Note Love.</p></article>
+      <section id="leadership" class="section about-leadership" aria-labelledby="leadership-heading">
+        <div class="section-width">
+          <div class="section-heading"><h2 id="leadership-heading">Leadership &amp; service</h2><span class="section-note">Teaching · teams · outreach</span></div>
+          <div class="leadership-feature">
+            <div><p class="eyebrow">2025–2026 / Steel City Codes</p><h3>Making programming education easier to reach.</h3><p>As National Program Director, I coordinated curriculum, outreach, and programming education across a national chapter network.</p></div>
+            <div class="leadership-feature-stat"><strong>≈50k</strong><span>views from digital outreach content</span></div>
+          </div>
+          <div class="leadership-timeline">
+            <article><p class="micro-label">2022–2026</p><div><h3>Clements NJROTC</h3><p>Company Master Chief and Physical Training Commander. Led and mentored more than 100 cadets, organized weekly training, and developed tutoring that generated more than 100 program service hours.</p></div><span>Team leadership</span></article>
+            <article><p class="micro-label">2025–2026</p><div><h3>Logic Club</h3><p>Founded and led a club covering logic, proofs, circuits, algorithms, and quantum computing through original study material.</p></div><span>Education</span></article>
+            <article><p class="micro-label">2022–present</p><div><h3>Community teaching</h3><p>Tutored AP Physics and Algebra II one on one, and provided free piano instruction through Note Love.</p></div><span>Service</span></article>
+            <article><p class="micro-label">2025</p><div><h3>CyberPatriot</h3><p>Placed fifth in the NJROTC Platinum Semifinals while hardening Linux images with Bash and system-administration tools.</p></div><span>Competition</span></article>
+          </div>
         </div>
       </section>
     </main>
