@@ -86,7 +86,15 @@
         <div class="section-width">
           <div class="section-heading"><h1 id="work-heading"><span class="section-number">02 /</span> Work</h1><span class="section-note">Research · engineering · current work</span></div>
           <nav class="section-jumps" aria-label="Work sections"><a href="#research">Research</a><a href="#experience">Engineering</a></nav>
-          <div id="current-work" class="work-intro"><p class="eyebrow">Research and engineering</p><p>From physical models and audio filters to EEG analysis and vehicle electronics, I build a reference, test the result, and then look for the part that needs better hardware or software.</p></div>
+          <figure id="current-work" class="work-quote">
+            <blockquote cite="https://platolibrary.com/dialogue/apology">
+              <p>“I know that I know nothing.”</p>
+            </blockquote>
+            <figcaption>
+              <span>— Socrates</span>
+              <a href="https://platolibrary.com/dialogue/apology">Plato’s <cite>Apology</cite> 21d (paraphrase)</a>
+            </figcaption>
+          </figure>
           <div id="research" class="work-chapter"><span class="micro-label">Research</span><h2>Models, signals, and computation</h2></div>
           <article id="ongoing-nuclear" class="work-story" aria-labelledby="nuclear-heading">
             <div class="work-story-copy">
@@ -114,20 +122,38 @@
             <div class="work-story-aside work-story-aside--diagram" aria-label="Biquad filter pipeline">
               <p class="micro-label">Filter path</p>
               <ol class="method-flow"><li><span>01</span> Split into 256-sample chunks</li><li><span>02</span> Propagate boundary states</li><li><span>03</span> Evaluate chunks in parallel</li><li><span>04</span> Fall back to CPU when needed</li></ol>
-              <p class="work-aside-note">Checked 65,539-sample signals against the CPU recurrence and multichannel API. Matched Release tests on NCSA Delta showed gains for tested workloads; complete-render acceleration is a separate target.</p>
+              <div class="work-filter-result">
+                <p class="micro-label">NCSA Delta · 32 seconds of stereo audio</p>
+                <p><strong>31.94 to 8.71 ms</strong></p>
+                <p>CPU to CUDA for the filter alone · 3.67× speedup</p>
+              </div>
+              <p class="work-aside-note">
+                Filter output was checked against the CPU recurrence and multichannel API. In the same timing run,
+                an 8-second, four-channel render with eight partials took 306.63 ms on CPU and 307.55 ms with CUDA filtering.
+              </p>
             </div>
           </article>
           <article class="work-eeg" aria-labelledby="eeg-heading">
             <div class="work-eeg-copy"><p class="eyebrow">2026 · Independent research</p><h3 id="eeg-heading">Resource-constrained EEG classification</h3><p>Can lightweight classifiers distinguish real and imagined left/right fist movement for people absent from training? I compared spectral, temporal, wavelet, CSP, and filter-bank CSP features with shrinkage LDA.</p><p>Separate execution and imagery benchmarks used acquisition records for 109 subjects per task. The historical local study tested subject transfer, calibration, channel reduction, shorter windows, and 16 artifact or noise scenarios. Follow-up validation is documented separately in the repository.</p><a class="text-link" href="https://github.com/cat-readme-txt/EEG-Analysis" target="_blank" rel="noopener noreferrer">Study repository <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a></div>
             <figure><a href="./assets/eeg-channel-reduction.png" target="_blank" rel="noopener" aria-label="Open full-size EEG channel reduction figure"><img src="./assets/eeg-channel-reduction.png" alt="EEG benchmark comparing mean leave-one-subject-out accuracy across electrode counts for motor execution and imagery." width="1580" height="940" loading="lazy" /></a><figcaption>Historical local benchmark · Mean leave-one-subject-out accuracy by channel count. Dashed line: 50% chance.</figcaption></figure>
           </article>
-          <div class="work-brief"><span class="micro-label">Summer 2025 / University of Houston</span><div><h3>LLM reasoning evaluation</h3><p>With Dr. Weidong Shi, I built a repeated-trial Python benchmark across biology, mathematics, and law. Response normalization, per-question scoring, retry handling, ICC, and Krippendorff’s alpha supported comparisons across model runs.</p></div></div>
+          <article id="llm-knowledge-transfer" class="work-brief" aria-labelledby="llm-transfer-heading">
+            <span class="micro-label">Summer 2025 / University of Houston</span>
+            <div>
+              <h3 id="llm-transfer-heading">LLM cross-domain knowledge transfer</h3>
+              <p>
+                With Professor Weidong Shi, I built a Python benchmark that evaluates LLM accuracy across
+                biology, mathematics, and law. The notebook normalizes and scores responses and uses
+                intraclass correlation and Krippendorff’s alpha to compare repeated model runs.
+              </p>
+              <a class="text-link" href="https://github.com/cat-readme-txt/LLMs-Cross-Domain-Knowledge-Transfer-Accuracy">Project repository</a>
+            </div>
+          </article>
           <div id="experience" class="work-chapter"><span class="micro-label">Engineering</span><h2>Interfaces and physical systems</h2></div>
           <article id="ongoing-solar-car" class="work-story work-story--solar" aria-labelledby="solar-heading">
             <div class="work-story-copy"><p class="eyebrow">Sept. 2026–present · Illini Solar Car</p><h3 id="solar-heading">HIL sensors &amp; PCB development</h3><p>I designed a KiCad schematic to emulate brake outputs and main-current sensor voltage for hardware-in-the-loop tests. It specifies a dual 12-bit DAC with a 2.5 V reference and nominal 0–5 V output, plus independently enabled 3.3 V brake channels.</p><p>I also reviewed blind-spot sensor footprint and BOM dependencies, evaluated weather-resistant obstacle sensors, and configured a Zephyr environment for integration. Electrical choices and physical validation remain in progress.</p></div>
             <div class="work-story-aside work-story-aside--solar"><p class="micro-label">HIL interface · schematic stage</p><div class="signal-path"><div><span>Analog emulation</span><strong>12-bit DAC</strong><small>Current-sensor output</small></div><div><span>Digital emulation</span><strong>3.3 V</strong><small>Enabled brake channels</small></div><div><span>Integration</span><strong>Zephyr</strong><small>Firmware environment</small></div></div><p class="work-aside-note">Schematic and firmware development are documented here; this is not a hardware validation result.</p></div>
           </article>
-          <div class="work-brief"><span class="micro-label">2026 / Hardware prototyping</span><div><h3>PCB &amp; firmware practice</h3><p>Designed an LED and resistor PCB in KiCad and implemented potentiometer-controlled LED brightness in MCUXpresso IDE.</p></div></div>
         </div>
       </section>
     </main>

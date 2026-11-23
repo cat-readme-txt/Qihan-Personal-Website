@@ -92,12 +92,375 @@
             <h1 id="projects-heading">
               <span class="section-number">03 /</span> Projects
             </h1>
-            <a class="text-link projects-jump-link" href="#more-projects">More projects</a>
           </div>
-          <div class="featured-projects" aria-label="Featured projects">
+          <nav id="more-projects" class="project-jump-nav" aria-label="Jump to a project">
+            <span class="micro-label">Project index</span>
+            <ul>
+              <li><a href="#project-quantum-decoder">Quantum decoder</a></li>
+              <li><a href="#project-fpga">INT8 accelerator</a></li>
+              <li><a href="#project-decoder-router">FPGA router</a></li>
+              <li><a href="#project-parity-checks">Parity checks</a></li>
+              <li><a href="#project-supply-chain">Supply chain</a></li>
+              <li><a href="#project-chronodox">Chronodox</a></li>
+              <li><a href="#project-void-navigator">VoidNavigator</a></li>
+              <li><a href="#project-linux-toolkit">Linux toolkit</a></li>
+              <li><a href="#project-math-ter">Math-ter</a></li>
+            </ul>
+          </nav>
+
+          <div class="featured-projects">
+            <article id="project-quantum-decoder" class="featured-project featured-project--study featured-project--teal" aria-labelledby="decoder-heading">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Quantum error correction · HackMidwest</span>
+                <span class="project-distinction">2nd place · Infleqtion Challenge 1</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="decoder-heading">ML-assisted quantum decoder<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Fast candidates for routine shots, deeper search when they disagree.</p>
+                  <p class="featured-project-description">
+                    Our Gross-code decoder runs two independently seeded PriorTilt searches and compares their
+                    predicted logical flips. On disagreement, it adds a Relay-BP candidate and uses a trained
+                    neural network to rank the options.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-light" href="https://github.com/Trade42/HackMidwest/tree/main/challenge-1-ml-decoder-kit">Decoder source</a>
+                    <a class="text-link" href="https://github.com/Trade42/HackMidwest/blob/main/challenge-1-ml-decoder-kit/report/REPORT.md">Evaluation report</a>
+                  </div>
+                </div>
+                <figure class="project-visual">
+                  <figcaption class="project-visual-head">
+                    <span>Full Relay-BP vs. hierarchy</span><span><i>p</i> = 0.005</span>
+                  </figcaption>
+                  <div class="project-visual-body project-benchmarks">
+                    <div class="project-benchmark">
+                      <div class="project-benchmark-heading">
+                        <p class="project-visual-label">Failed pairs per 10,000</p>
+                        <strong class="project-gain">43% fewer</strong>
+                      </div>
+                      <dl>
+                        <div>
+                          <dt>Full Relay-BP</dt>
+                          <dd><span class="project-bar" aria-hidden="true"></span><strong>845</strong></dd>
+                        </div>
+                        <div>
+                          <dt>Hierarchy</dt>
+                          <dd><span class="project-bar project-bar--highlight" style="--bar-length: 56.7%" aria-hidden="true"></span><strong>479</strong></dd>
+                        </div>
+                      </dl>
+                    </div>
+                    <div class="project-benchmark">
+                      <div class="project-benchmark-heading">
+                        <p class="project-visual-label">Mean decoding time per pair</p>
+                        <strong class="project-gain">44% lower</strong>
+                      </div>
+                      <dl>
+                        <div>
+                          <dt>Full Relay-BP</dt>
+                          <dd><span class="project-bar" aria-hidden="true"></span><strong>1,471 ms</strong></dd>
+                        </div>
+                        <div>
+                          <dt>Hierarchy</dt>
+                          <dd><span class="project-bar project-bar--highlight" style="--bar-length: 56.1%" aria-hidden="true"></span><strong>825 ms</strong></dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                  <p class="project-visual-foot">Same held-out simulated X and Z memory shots for both methods</p>
+                </figure>
+              </div>
+              <div class="featured-project-details">
+                <div>
+                  <h3>12 logical qubits</h3>
+                  <p>The Gross code encodes 12 logical qubits in 144 data qubits at code distance 12.</p>
+                </div>
+                <div>
+                  <h3>8,784 fault effects</h3>
+                  <p>The circuit model maps candidate fault combinations to detector and logical flips.</p>
+                </div>
+                <div>
+                  <h3>BP-OSD reference</h3>
+                  <p>At the same noise level, BP-OSD failed 2,433 pairs and averaged 581 ms. The hierarchy had
+                    80% fewer failures and 42% higher mean time.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Test scope</span>
+                <p>A pair fails if either of its two memory shots has an incorrect logical prediction. At <i>p</i> = 0.005, the 99th-percentile decoding time per pair rose from 8.27 to 9.88 seconds.</p>
+                <a class="text-link" href="https://github.com/Infleqtion/MidQWest-2026#challenge-1-ml-assisted-qec-decoding">Infleqtion challenge</a>
+              </div>
+            </article>
+
+            <article id="project-fpga" class="featured-project featured-project--fpga" aria-labelledby="fpga-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Serial baseline vs. pipeline</span>
+                <span>Digital hardware · SystemVerilog · 2026</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="fpga-title">Pipelined INT8<br />FPGA accelerator<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Eight signed INT8 lanes.<br />One result per cycle without stalls.</p>
+                  <p class="featured-project-description">
+                    Built a four-stage streaming dot-product engine with exact
+                    19-bit accumulation and ready/valid backpressure. The
+                    pipeline replaces the serial baseline’s shared multiplier
+                    with eight parallel lanes and a registered reduction tree.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-primary" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator" target="_blank" rel="noopener noreferrer">Source code
+                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                    </a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator/blob/main/evidence/VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation report
+                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                </div>
+                <div class="fpga-visual" role="img" aria-label="Four registered stages: eight 16-bit signed products, four 17-bit pair sums, two 18-bit quad sums, and one exact 19-bit final result">
+                  <div class="fpga-visual-head"><span>DOT8 / STREAMING DATAPATH</span><span>RTL STUDY</span></div>
+                  <div class="fpga-stage-grid">
+                    <div><span>01 / 8 ×</span><strong>16 bit</strong><small>Signed products</small></div>
+                    <div><span>02 / 4 ×</span><strong>17 bit</strong><small>Pair sums</small></div>
+                    <div><span>03 / 2 ×</span><strong>18 bit</strong><small>Quad sums</small></div>
+                    <div><span>04 / 1 ×</span><strong>19 bit</strong><small>Final result</small></div>
+                  </div>
+                  <div class="fpga-visual-foot"><span>ready / valid</span><span>II = 1 · no stalls</span></div>
+                </div>
+              </div>
+              <div class="featured-project-details featured-project-comparisons" role="group" aria-label="Serial baseline compared with the pipeline">
+                <div>
+                  <p class="micro-label">Transfer latency</p>
+                  <h3>9 to 4 cycles</h3>
+                  <p>56% fewer cycles from input to output with no stalls.</p>
+                </div>
+                <div>
+                  <p class="micro-label">Cycles between inputs</p>
+                  <h3>9 cycles to 1</h3>
+                  <p>9× the peak input throughput at the same clock rate with no stalls.</p>
+                </div>
+                <div>
+                  <p class="micro-label">Artix-7 DSP use</p>
+                  <h3>1 to 8 DSP slices</h3>
+                  <p>The pipeline uses seven more multiplier slices to perform all products in parallel.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Validation scope</span>
+                <p>Both cores matched all 13,846 reference outputs. The iCE40UP5K design was routed at a 12 MHz clock constraint and passed mapped-netlist simulation. Physical board testing is pending.</p>
+              </div>
+            </article>
+
+            <article id="project-decoder-router" class="featured-project featured-project--study" aria-labelledby="router-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Digital hardware · SystemVerilog</span><span>Urbana Spartan-7 prototype · 2026</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="router-title">FPGA decoder router<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Keep the first correction or ask the host to search again.</p>
+                  <p class="featured-project-description">
+                    The Urbana design replays saved syndrome bits and statistics from an initial software decode.
+                    A four-stage fixed-point core scores the first candidate and returns a decision over UART. It
+                    implements the team’s first-solution routing policy.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-light" href="https://github.com/Trade42/HackMidwest/tree/fpga/fpga_board">FPGA source</a>
+                    <a class="text-link" href="https://github.com/Trade42/HackMidwest/blob/fpga/fpga_board/README.md">Board and simulation guide</a>
+                  </div>
+                </div>
+                <figure class="project-visual">
+                  <figcaption class="project-visual-head">
+                    <span>Saved shot replay</span><span>UART · 115,200 baud</span>
+                  </figcaption>
+                  <ol class="project-visual-body router-flow" role="list" aria-label="Router signal path">
+                    <li>
+                      <span>Receive</span>
+                      <strong>124 bytes</strong>
+                      <small>Syndrome bits and first-decode statistics</small>
+                    </li>
+                    <li>
+                      <span>Extract</span>
+                      <strong>17 features</strong>
+                      <small>13 syndrome counts and four decoder statistics</small>
+                    </li>
+                    <li>
+                      <span>Score</span>
+                      <strong>56-bit sum</strong>
+                      <small>Fixed-point decision with an early-accept rule</small>
+                    </li>
+                    <li>
+                      <span>Reply</span>
+                      <strong>Fast / Slow</strong>
+                      <small>Keep or rerun the first software decode</small>
+                    </li>
+                  </ol>
+                  <p class="project-visual-foot">Frozen X-memory model · <i>p</i> = 0.004</p>
+                </figure>
+              </div>
+              <div class="featured-project-details featured-project-comparisons">
+                <div>
+                  <p class="micro-label">Mean software time per pair</p>
+                  <h3>131.27 to 124.09 ms</h3>
+                  <p>5.47% lower with the Python router versus full Relay-BP on the same saved shots.</p>
+                </div>
+                <div>
+                  <p class="micro-label">Failed pairs</p>
+                  <h3>84 per 10,000 each</h3>
+                  <p>The router and full Relay-BP had the same failure count at <i>p</i> = 0.004.</p>
+                </div>
+                <div>
+                  <p class="micro-label">RTL validation</p>
+                  <h3>5,000 saved shots</h3>
+                  <p>The circuit’s routing decisions matched the Python reference on the frozen validation set.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Validation</span>
+                <p>On the Mac, the 99th-percentile software time rose from 2.21 to 2.66 seconds. Yosys mapped the hardware to 983 LUTs, 688 flip-flops, and 17 DSP slices. Physical board replay is pending.</p>
+                <a class="text-link" href="https://github.com/Trade42/HackMidwest/blob/main/challenge-1-ml-decoder-kit/results/mac/gain_p0.004/comparison.json">Software comparison</a>
+              </div>
+            </article>
+
+            <article id="project-parity-checks" class="featured-project featured-project--study featured-project--paper featured-project--violet" aria-labelledby="parity-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Quantum memory · Qiskit</span><span>IBM Quantum hardware · Nov. 2026</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="parity-title">Repeated parity checks<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Measure the same memory repeatedly and decode the history.</p>
+                  <p class="featured-project-description">
+                    Three data qubits store a logical bit while two ancillas check neighboring pairs. I compared
+                    final majority vote with a decoder that uses the full sequence of parity measurements, then
+                    tested alternative layouts and measurement instructions on <code>ibm_fez</code>.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-primary" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker">Source code</a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker/blob/main/docs/IMPROVEMENT_RESULTS_2026-11-18.md">Hardware results</a>
+                  </div>
+                </div>
+                <figure class="project-visual">
+                  <figcaption class="project-visual-head">
+                    <span>Native parity-check path</span><span>ibm_fez</span>
+                  </figcaption>
+                  <div class="project-visual-body">
+                    <ol class="parity-path" role="list" aria-label="Physical qubits in path order, with data qubits alternating with check ancillas">
+                      <li>
+                        <span>Data</span>
+                        <strong>D<sub>0</sub></strong>
+                        <small>Q140</small>
+                      </li>
+                      <li class="parity-check-node"><span>Check</span><strong>A<sub>0</sub></strong><small>Q141</small></li>
+                      <li>
+                        <span>Data</span>
+                        <strong>D<sub>1</sub></strong>
+                        <small>Q142</small>
+                      </li>
+                      <li class="parity-check-node"><span>Check</span><strong>A<sub>1</sub></strong><small>Q143</small></li>
+                      <li>
+                        <span>Data</span>
+                        <strong>D<sub>2</sub></strong>
+                        <small>Q136</small>
+                      </li>
+                    </ol>
+                    <table class="parity-results">
+                      <caption>History-decoded failures for encoded 1 after four rounds</caption>
+                      <thead><tr><th scope="col">Baseline</th><th scope="col">Native path</th><th scope="col">Fast readout</th></tr></thead>
+                      <tbody><tr><td>70/512</td><td>50/512</td><td>48/512</td></tr></tbody>
+                    </table>
+                  </div>
+                  <p class="project-visual-foot"><strong class="project-gain">31% fewer</strong> encoded-1 failures with fast readout versus baseline in one hardware job</p>
+                </figure>
+              </div>
+              <div class="featured-project-details">
+                <div>
+                  <h3>32,256 hardware shots</h3>
+                  <p>One interleaved job ran 63 circuits on the same five physical qubits across all three
+                    variants.</p>
+                </div>
+                <div>
+                  <h3>48% fewer CZ gates</h3>
+                  <p>For four-round encoded-0 and encoded-1 circuits, the baseline used 31 CZ gates at depth 85.
+                    The fast variant used 16 at depth 45.</p>
+                </div>
+                <div>
+                  <h3>Coherence tradeoff</h3>
+                  <p>For encoded plus at four rounds, negative logical-X outcomes rose from 237/512 with the
+                    baseline to 345/512 with fast readout.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Experiment</span>
+                <p>Qiskit Runtime SamplerV2 / dynamic circuits / sham-check controls / syndrome history</p>
+                <a class="text-link" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker/tree/main/data">Shot records</a>
+              </div>
+            </article>
+
+            <article id="project-supply-chain" class="featured-project featured-project--study featured-project--paper" aria-labelledby="supply-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Forecasting and optimization</span><span>DSDG Supply Chain Hackathon · 2026</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="supply-title">Supply-chain forecasting<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Two purchasing plans for different disruption scenarios.</p>
+                  <p class="featured-project-description">
+                    I combined supplier, demand, price, shipping, tariff, and news data to forecast disruptions
+                    and landed costs. A lean policy favors lower costs with diversified suppliers. An insured
+                    policy orders extra inventory where a closure or delay could cause shortages.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-primary" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026">Project repository</a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026/tree/main/methods">Methods report</a>
+                  </div>
+                </div>
+                <figure class="project-visual">
+                  <figcaption class="project-visual-head">
+                    <span>Selected submission pair</span><span>Week 221 snapshot</span>
+                  </figcaption>
+                  <div class="project-visual-body">
+                    <p class="project-visual-label">Shared demand, supplier, and market data</p>
+                    <dl class="supply-policies">
+                      <div>
+                        <dt>Lean</dt>
+                        <dd><strong>~948k</strong><span>units ordered for the private window</span></dd>
+                        <dd>30-scenario purchase plan</dd>
+                      </div>
+                      <div>
+                        <dt>Insured</dt>
+                        <dd><strong>~1.07M</strong><span>units ordered for the private window</span></dd>
+                        <dd>Extra stock for disruption risk</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <p class="project-visual-foot">Planned quantities for weeks 222–234</p>
+                </figure>
+              </div>
+              <div class="featured-project-details">
+                <div>
+                  <h3>89.45 public score</h3>
+                  <p>Both selected files earned the same public leaderboard score on weeks 209–221.</p>
+                </div>
+                <div>
+                  <h3>+0.79 modeled points</h3>
+                  <p>Across 48 local scenarios, the original pair averaged 81.80 and the revised pair averaged
+                    82.59, using the stronger of the two policies in each scenario.</p>
+                </div>
+                <div>
+                  <h3>Chronological backtests</h3>
+                  <p>Each historical forecast used supplier outcomes, prices, and news available by its cutoff
+                    week.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Score scope</span>
+                <p>Public scores cover weeks 209–221. Private leaderboard results for weeks 222–234 remain unknown.</p>
+                <a class="text-link" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026/tree/main/submissions/candidates">Submission pair</a>
+              </div>
+            </article>
+
             <article id="project-chronodox" class="featured-project featured-project--chronodox" aria-labelledby="chronodox-title">
               <div class="featured-project-kicker">
-                <span class="micro-label">01 / Featured project</span>
+                <span class="micro-label">Game engine and self-play</span>
                 <span>Strategy simulation · 2026</span>
               </div>
               <div class="featured-project-main">
@@ -156,54 +519,10 @@
                 </a>
               </div>
             </article>
-            <article id="project-fpga" class="featured-project featured-project--fpga" aria-labelledby="fpga-title">
-              <div class="featured-project-kicker">
-                <span class="micro-label">02 / Featured project</span>
-                <span>Digital hardware · SystemVerilog · 2026</span>
-              </div>
-              <div class="featured-project-main">
-                <div class="featured-project-copy">
-                  <h2 id="fpga-title">Pipelined INT8<br />FPGA accelerator<span class="title-period">.</span></h2>
-                  <p class="featured-project-lede">Eight signed INT8 lanes.<br />One result per cycle without stalls.</p>
-                  <p class="featured-project-description">
-                    Built a four-stage streaming dot-product engine with exact
-                    19-bit accumulation and ready/valid backpressure. The
-                    registered reduction tree keeps each vector's arithmetic
-                    exact from signed products to the final sum.
-                  </p>
-                  <div class="featured-project-links">
-                    <a class="button button-primary" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator" target="_blank" rel="noopener noreferrer">Source code
-                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
-                    </a>
-                    <a class="text-link" href="https://github.com/cat-readme-txt/8INT-FPGA-Dot-Product-Accelerator/blob/main/evidence/VALIDATION.md" target="_blank" rel="noopener noreferrer">Validation report
-                      <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg>
-                    </a>
-                  </div>
-                </div>
-                <div class="fpga-visual" role="img" aria-label="Four registered stages: eight 16-bit signed products, four 17-bit pair sums, two 18-bit quad sums, and one exact 19-bit final result">
-                  <div class="fpga-visual-head"><span>DOT8 / STREAMING DATAPATH</span><span>RTL STUDY</span></div>
-                  <div class="fpga-stage-grid">
-                    <div><span>01 / 8 ×</span><strong>16 bit</strong><small>Signed products</small></div>
-                    <div><span>02 / 4 ×</span><strong>17 bit</strong><small>Pair sums</small></div>
-                    <div><span>03 / 2 ×</span><strong>18 bit</strong><small>Quad sums</small></div>
-                    <div><span>04 / 1 ×</span><strong>19 bit</strong><small>Final result</small></div>
-                  </div>
-                  <div class="fpga-visual-foot"><span>ready / valid</span><span>II = 1 · no stalls</span></div>
-                </div>
-              </div>
-              <div class="featured-project-details">
-                <div><span class="feature-number">01</span><h3>13,846 exact matches</h3><p>Per arithmetic core against the integer reference in the retained validation run.</p></div>
-                <div><span class="feature-number">02</span><h3>4-cycle latency</h3><p>No-stall transfer latency with one new vector accepted each cycle once the pipeline fills.</p></div>
-                <div><span class="feature-number">03</span><h3>8 vs. 1 DSP blocks</h3><p>Artix-7 DSP48E1 use for the pipeline compared with the one-multiplier serial baseline.</p></div>
-              </div>
-              <div class="featured-project-bottom">
-                <span class="micro-label">Validation scope</span>
-                <p>Generated an iCE40UP5K bitstream at a 12 MHz clock constraint and passed mapped-netlist functional simulation. The bitstream has not been tested on a physical board.</p>
-              </div>
-            </article>
+
             <article id="project-void-navigator" class="featured-project featured-project--void" aria-labelledby="void-title">
               <div class="featured-project-kicker">
-                <span class="micro-label">03 / Featured project</span>
+                <span class="micro-label">Desktop game development</span>
                 <span>Desktop arcade · Java 17</span>
               </div>
               <div class="featured-project-main">
@@ -258,412 +577,115 @@
                 </a>
               </div>
             </article>
+
+            <article id="project-linux-toolkit" class="featured-project featured-project--study featured-project--slate" aria-labelledby="linux-toolkit-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Linux system administration · Bash</span><span>Defensive tooling · 2026</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="linux-toolkit-title">Linux hardening toolkit<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Audit a system, record changes, and roll back selected tasks.</p>
+                  <p class="featured-project-description">
+                    I built a menu-driven toolkit for defensive Linux maintenance. It covers accounts, SSH,
+                    firewalls, services, permissions, and integrity checks. Each run keeps a transcript and
+                    records the state needed for supported rollbacks.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-light" href="https://github.com/cat-readme-txt/Linux-Security">Source code</a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/Linux-Security/blob/main/README.md">Usage and rollback guide</a>
+                  </div>
+                </div>
+                <figure class="project-visual">
+                  <figcaption class="project-visual-head"><span>Hardening run records</span><span>Bash toolkit</span></figcaption>
+                  <dl class="project-visual-body run-files">
+                    <div>
+                      <dt><code>actions.log</code></dt>
+                      <dd>Machine-readable changes for selective rollback</dd>
+                    </div>
+                    <div>
+                      <dt><code>output.log</code></dt>
+                      <dd>Readable transcript of the run</dd>
+                    </div>
+                    <div>
+                      <dt><code>backups/</code></dt>
+                      <dd>Original copies of edited configuration files</dd>
+                    </div>
+                  </dl>
+                  <p class="project-visual-foot">Each run has a timestamped directory</p>
+                </figure>
+              </div>
+              <div class="featured-project-details">
+                <div>
+                  <h3>25 hardening sections</h3>
+                  <p>Read-only checks cover service health and dependencies. Separate tasks apply account,
+                    network, and service changes.</p>
+                </div>
+                <div>
+                  <h3>3 distro families</h3>
+                  <p>Package and service handlers support Debian and Ubuntu, RHEL and Fedora, and SUSE families.</p>
+                </div>
+                <div>
+                  <h3>Selective rollback</h3>
+                  <p>The companion script uses the action record and backups to restore supported configuration
+                    and state changes.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Platform</span>
+                <p>Bash / systemd / apt, dnf or yum, and zypper</p>
+                <a class="text-link" href="https://ubuntu.com/server/docs/explanation/security/">Ubuntu security docs</a>
+              </div>
+            </article>
+
+            <article id="project-math-ter" class="featured-project featured-project--study" aria-labelledby="math-ter-title">
+              <div class="featured-project-kicker">
+                <span class="micro-label">Learning software · JavaScript</span><span>Browser app · 2026</span>
+              </div>
+              <div class="featured-project-main">
+                <div class="featured-project-copy">
+                  <h2 id="math-ter-title">Math-ter<span class="title-period">.</span></h2>
+                  <p class="featured-project-lede">Learn a number sense method, then practice it.</p>
+                  <p class="featured-project-description">
+                    Math-ter pairs worked lessons with generated practice. Choose a topic and difficulty, get an
+                    explanation after answering, and track accuracy by topic and category. The course and
+                    practice work offline after the first successful load.
+                  </p>
+                  <div class="featured-project-links">
+                    <a class="button button-light" href="https://cat-readme-txt.github.io/Math-ter/">Open Math-ter</a>
+                    <a class="text-link" href="https://github.com/cat-readme-txt/Math-ter">Source code</a>
+                  </div>
+                </div>
+                <figure class="project-visual project-visual--screenshot">
+                  <a href="https://cat-readme-txt.github.io/Math-ter/#practice/lesson/squares" aria-label="Try the squaring shortcuts practice in Math-ter">
+                    <img src="./assets/math-ter-practice.webp" width="1260" height="910" alt="Math-ter’s Squaring shortcuts practice shows the solution to 25 squared and progress by difficulty, topic, category, and course." loading="lazy" />
+                  </a>
+                  <figcaption class="project-visual-head"><span>Squaring shortcuts</span><span>Practice and feedback</span></figcaption>
+                </figure>
+              </div>
+              <div class="featured-project-details">
+                <div>
+                  <h3>71 topics</h3>
+                  <p>Six categories cover mental arithmetic, fractions, algebra, geometry, and introductory
+                    calculus.</p>
+                </div>
+                <div>
+                  <h3>3 difficulty levels</h3>
+                  <p>Practice ranges from bounded questions to contest-inspired variants with worked solutions
+                    and archive links.</p>
+                </div>
+                <div>
+                  <h3>Offline practice</h3>
+                  <p>A service worker caches the app and the browser keeps per-topic progress locally.</p>
+                </div>
+              </div>
+              <div class="featured-project-bottom">
+                <span class="micro-label">Built with</span>
+                <p>JavaScript / HTML / CSS / service worker / Node.js tests</p>
+                <a class="text-link" href="https://github.com/cat-readme-txt/Math-ter#sources">Lesson references</a>
+              </div>
+            </article>
           </div>
-
-          <section id="more-projects" aria-label="More projects">
-            <nav class="project-jump-nav" aria-label="Jump to a project">
-              <span class="micro-label">More projects</span>
-              <ul>
-                <li><a href="#project-quantum-decoder">Quantum decoder</a></li>
-                <li><a href="#project-parity-checks">Parity checks</a></li>
-                <li><a href="#project-decoder-router">FPGA router</a></li>
-                <li><a href="#project-supply-chain">Supply chain</a></li>
-                <li><a href="#project-math-ter">Math-ter</a></li>
-                <li><a href="#project-linux-toolkit">Linux toolkit</a></li>
-              </ul>
-            </nav>
-            <div class="featured-projects">
-              <article id="project-quantum-decoder" class="featured-project featured-project--study featured-project--teal" aria-labelledby="decoder-heading">
-                <div class="featured-project-kicker">
-                  <span class="micro-label">Quantum error correction · HackMidwest</span>
-                  <span class="project-distinction">2nd place · Infleqtion Challenge 1</span>
-                </div>
-                <div class="featured-project-main">
-                  <div class="featured-project-copy">
-                    <h2 id="decoder-heading">ML-assisted quantum decoder<span class="title-period">.</span></h2>
-                    <p class="featured-project-lede">Fast candidates for routine shots, deeper search when they disagree.</p>
-                    <p class="featured-project-description">
-                      Our Gross-code decoder runs two independently seeded PriorTilt searches and compares their
-                      predicted logical flips. On disagreement, it adds a Relay-BP candidate and uses a trained
-                      neural network to rank the options.
-                    </p>
-                    <div class="featured-project-links">
-                      <a class="button button-light" href="https://github.com/Trade42/HackMidwest/tree/main/challenge-1-ml-decoder-kit">Decoder source</a>
-                      <a class="text-link" href="https://github.com/Trade42/HackMidwest/blob/main/challenge-1-ml-decoder-kit/report/REPORT.md">Evaluation report</a>
-                    </div>
-                  </div>
-                  <figure class="project-visual">
-                    <figcaption class="project-visual-head">
-                      <span>Held-out memory tests</span><span><i>p</i> = 0.005</span>
-                    </figcaption>
-                    <div class="project-visual-body project-benchmarks">
-                      <div class="project-benchmark">
-                        <p class="project-visual-label">Failed pairs per 10,000</p>
-                        <dl>
-                          <div>
-                            <dt>Relay-BP</dt>
-                            <dd><span class="project-bar" aria-hidden="true"></span><strong>845</strong></dd>
-                          </div>
-                          <div>
-                            <dt>Hierarchy</dt>
-                            <dd><span class="project-bar project-bar--highlight" style="--bar-length: 56.7%" aria-hidden="true"></span><strong>479</strong></dd>
-                          </div>
-                        </dl>
-                      </div>
-                      <div class="project-benchmark">
-                        <p class="project-visual-label">Mean decoding time per pair</p>
-                        <dl>
-                          <div>
-                            <dt>Relay-BP</dt>
-                            <dd><span class="project-bar" aria-hidden="true"></span><strong>1,471 ms</strong></dd>
-                          </div>
-                          <div>
-                            <dt>Hierarchy</dt>
-                            <dd><span class="project-bar project-bar--highlight" style="--bar-length: 56.1%" aria-hidden="true"></span><strong>825 ms</strong></dd>
-                          </div>
-                        </dl>
-                      </div>
-                    </div>
-                    <p class="project-visual-foot">Same simulated X and Z memory shots for both methods</p>
-                  </figure>
-                </div>
-                <div class="featured-project-details">
-                  <div>
-                    <h3>12 logical qubits</h3>
-                    <p>The Gross code encodes 12 logical qubits in 144 data qubits at code distance 12.</p>
-                  </div>
-                  <div>
-                    <h3>8,784 fault effects</h3>
-                    <p>The circuit model maps candidate fault combinations to detector and logical flips.</p>
-                  </div>
-                  <div>
-                    <h3>3 noise settings</h3>
-                    <p>The evaluation used separate training, validation, and test shots at <i>p</i> = 0.003,
-                      0.004, and 0.005.</p>
-                  </div>
-                </div>
-                <div class="featured-project-bottom">
-                  <span class="micro-label">Test scope</span>
-                  <p>A pair fails if either memory shot has an incorrect logical prediction. Pair time sums the two software decodes.</p>
-                  <a class="text-link" href="https://github.com/Infleqtion/MidQWest-2026#challenge-1-ml-assisted-qec-decoding">Infleqtion challenge</a>
-                </div>
-              </article>
-
-              <article id="project-parity-checks" class="featured-project featured-project--study featured-project--paper featured-project--violet" aria-labelledby="parity-title">
-                <div class="featured-project-kicker">
-                  <span class="micro-label">Quantum memory · Qiskit</span><span>IBM Quantum hardware · Nov. 2026</span>
-                </div>
-                <div class="featured-project-main">
-                  <div class="featured-project-copy">
-                    <h2 id="parity-title">Repeated parity checks<span class="title-period">.</span></h2>
-                    <p class="featured-project-lede">Measure the same memory repeatedly and decode the history.</p>
-                    <p class="featured-project-description">
-                      Three data qubits store a logical bit while two ancillas check neighboring pairs. I compared
-                      final majority vote with a decoder that uses the full sequence of parity measurements, then
-                      tested alternative layouts and measurement instructions on <code>ibm_fez</code>.
-                    </p>
-                    <div class="featured-project-links">
-                      <a class="button button-primary" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker">Source code</a>
-                      <a class="text-link" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker/blob/main/docs/IMPROVEMENT_RESULTS_2026-11-18.md">Hardware results</a>
-                    </div>
-                  </div>
-                  <figure class="project-visual">
-                    <figcaption class="project-visual-head">
-                      <span>Native parity-check path</span><span>ibm_fez</span>
-                    </figcaption>
-                    <div class="project-visual-body">
-                      <ol class="parity-path" role="list" aria-label="Physical qubits in path order, with data qubits alternating with check ancillas">
-                        <li>
-                          <span>Data</span>
-                          <strong>D<sub>0</sub></strong>
-                          <small>Q140</small>
-                        </li>
-                        <li class="parity-check-node"><span>Check</span><strong>A<sub>0</sub></strong><small>Q141</small></li>
-                        <li>
-                          <span>Data</span>
-                          <strong>D<sub>1</sub></strong>
-                          <small>Q142</small>
-                        </li>
-                        <li class="parity-check-node"><span>Check</span><strong>A<sub>1</sub></strong><small>Q143</small></li>
-                        <li>
-                          <span>Data</span>
-                          <strong>D<sub>2</sub></strong>
-                          <small>Q136</small>
-                        </li>
-                      </ol>
-                      <table class="parity-results">
-                        <caption>Encoded-1 readout failures after four rounds</caption>
-                        <thead><tr><th scope="col">Baseline</th><th scope="col">Native path</th><th scope="col">Fast readout</th></tr></thead>
-                        <tbody><tr><td>70/512</td><td>50/512</td><td>48/512</td></tr></tbody>
-                      </table>
-                    </div>
-                    <p class="project-visual-foot">Syndrome-history decoder · one hardware job</p>
-                  </figure>
-                </div>
-                <div class="featured-project-details">
-                  <div>
-                    <h3>32,256 hardware shots</h3>
-                    <p>One interleaved job ran 63 circuits on the same five physical qubits across all three
-                      variants.</p>
-                  </div>
-                  <div>
-                    <h3>31 to 16 CZ gates</h3>
-                    <p>The native-path layout reduced the two-qubit gate count for four-round encoded-0 and
-                      encoded-1 circuits.</p>
-                  </div>
-                  <div>
-                    <h3>Readout and coherence</h3>
-                    <p>At four rounds, faster measurement reduced encoded-1 failures and increased negative
-                      logical-X outcomes for encoded-plus in the same hardware job.</p>
-                  </div>
-                </div>
-                <div class="featured-project-bottom">
-                  <span class="micro-label">Experiment</span>
-                  <p>Qiskit Runtime SamplerV2 / dynamic circuits / sham-check controls / syndrome history</p>
-                  <a class="text-link" href="https://github.com/cat-readme-txt/Quantum-Parity-Checker/tree/main/data">Shot records</a>
-                </div>
-              </article>
-
-              <article id="project-decoder-router" class="featured-project featured-project--study" aria-labelledby="router-title">
-                <div class="featured-project-kicker">
-                  <span class="micro-label">Digital hardware · SystemVerilog</span><span>Urbana Spartan-7 prototype · 2026</span>
-                </div>
-                <div class="featured-project-main">
-                  <div class="featured-project-copy">
-                    <h2 id="router-title">FPGA decoder router<span class="title-period">.</span></h2>
-                    <p class="featured-project-lede">Keep the first correction or ask the host to search again.</p>
-                    <p class="featured-project-description">
-                      The Urbana design replays saved syndrome bits and statistics from an initial software decode.
-                      A four-stage fixed-point core scores the first candidate and returns a decision over UART. It
-                      implements the team’s first-solution routing policy.
-                    </p>
-                    <div class="featured-project-links">
-                      <a class="button button-light" href="https://github.com/Trade42/HackMidwest/tree/fpga/fpga_board">FPGA source</a>
-                      <a class="text-link" href="https://github.com/Trade42/HackMidwest/blob/fpga/fpga_board/README.md">Board and simulation guide</a>
-                    </div>
-                  </div>
-                  <figure class="project-visual">
-                    <figcaption class="project-visual-head">
-                      <span>Saved shot replay</span><span>UART · 115,200 baud</span>
-                    </figcaption>
-                    <ol class="project-visual-body router-flow" role="list" aria-label="Router signal path">
-                      <li>
-                        <span>Receive</span>
-                        <strong>124 bytes</strong>
-                        <small>Syndrome bits and first-decode statistics</small>
-                      </li>
-                      <li>
-                        <span>Extract</span>
-                        <strong>17 features</strong>
-                        <small>13 syndrome counts and four decoder statistics</small>
-                      </li>
-                      <li>
-                        <span>Score</span>
-                        <strong>56-bit sum</strong>
-                        <small>Fixed-point decision with an early-accept rule</small>
-                      </li>
-                      <li>
-                        <span>Reply</span>
-                        <strong>Fast / Slow</strong>
-                        <small>Keep or rerun the first software decode</small>
-                      </li>
-                    </ol>
-                    <p class="project-visual-foot">Frozen X-memory model · <i>p</i> = 0.004</p>
-                  </figure>
-                </div>
-                <div class="featured-project-details">
-                  <div>
-                    <h3>5,000 saved shots</h3>
-                    <p>The validation vectors cover the frozen X-memory model and include the original simulated
-                      syndromes.</p>
-                  </div>
-                  <div>
-                    <h3>0 verdict mismatches</h3>
-                    <p>The fixed-point rule matched the floating-point reference on the saved validation set.</p>
-                  </div>
-                  <div>
-                    <h3>17 DSP slices</h3>
-                    <p>Yosys mapped the UART and router design to 983 LUTs, 688 flip-flops, and 17 DSP48E1 slices.</p>
-                  </div>
-                </div>
-                <div class="featured-project-bottom">
-                  <span class="micro-label">Validation</span>
-                  <p>Saved-shot replay and RTL checks cover the routing decision. Physical board replay and measured timing remain open.</p>
-                </div>
-              </article>
-
-              <article id="project-supply-chain" class="featured-project featured-project--study featured-project--paper" aria-labelledby="supply-title">
-                <div class="featured-project-kicker">
-                  <span class="micro-label">Forecasting and optimization</span><span>DSDG Supply Chain Hackathon · 2026</span>
-                </div>
-                <div class="featured-project-main">
-                  <div class="featured-project-copy">
-                    <h2 id="supply-title">Supply-chain forecasting<span class="title-period">.</span></h2>
-                    <p class="featured-project-lede">Two purchasing plans for different disruption scenarios.</p>
-                    <p class="featured-project-description">
-                      I combined supplier, demand, price, shipping, tariff, and news data to forecast disruptions
-                      and landed costs. A lean policy favors lower costs with diversified suppliers. An insured
-                      policy orders extra inventory where a closure or delay could cause shortages.
-                    </p>
-                    <div class="featured-project-links">
-                      <a class="button button-primary" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026">Project repository</a>
-                      <a class="text-link" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026/tree/main/methods">Methods report</a>
-                    </div>
-                  </div>
-                  <figure class="project-visual">
-                    <figcaption class="project-visual-head">
-                      <span>Selected submission pair</span><span>Week 221 snapshot</span>
-                    </figcaption>
-                    <div class="project-visual-body">
-                      <p class="project-visual-label">Shared demand, supplier, and market data</p>
-                      <dl class="supply-policies">
-                        <div>
-                          <dt>Lean</dt>
-                          <dd><strong>~948k</strong><span>units ordered for the private window</span></dd>
-                          <dd>30-scenario purchase plan</dd>
-                        </div>
-                        <div>
-                          <dt>Insured</dt>
-                          <dd><strong>~1.07M</strong><span>units ordered for the private window</span></dd>
-                          <dd>Extra stock for disruption risk</dd>
-                        </div>
-                      </dl>
-                    </div>
-                    <p class="project-visual-foot">Planned quantities for weeks 222–234</p>
-                  </figure>
-                </div>
-                <div class="featured-project-details">
-                  <div>
-                    <h3>89.45 public score</h3>
-                    <p>Both selected files earned the same public leaderboard score on weeks 209–221.</p>
-                  </div>
-                  <div>
-                    <h3>48 stress scenarios</h3>
-                    <p>Local tests compared the two policies under potential supplier closures and other
-                      disruptions.</p>
-                  </div>
-                  <div>
-                    <h3>Chronological backtests</h3>
-                    <p>Each historical forecast used supplier outcomes, prices, and news available by its cutoff
-                      week.</p>
-                  </div>
-                </div>
-                <div class="featured-project-bottom">
-                  <span class="micro-label">Score scope</span>
-                  <p>Public scores cover weeks 209–221. Private leaderboard results for weeks 222–234 remain unknown.</p>
-                  <a class="text-link" href="https://github.com/cat-readme-txt/DSDG-Supply-Chain-Hackathon-2026/tree/main/submissions/candidates">Submission pair</a>
-                </div>
-              </article>
-
-              <article id="project-math-ter" class="featured-project featured-project--study" aria-labelledby="math-ter-title">
-                <div class="featured-project-kicker">
-                  <span class="micro-label">Learning software · JavaScript</span><span>Browser app · 2026</span>
-                </div>
-                <div class="featured-project-main">
-                  <div class="featured-project-copy">
-                    <h2 id="math-ter-title">Math-ter<span class="title-period">.</span></h2>
-                    <p class="featured-project-lede">Learn a number sense method, then practice it.</p>
-                    <p class="featured-project-description">
-                      Math-ter pairs worked lessons with generated practice. Choose a topic and difficulty, get an
-                      explanation after answering, and track accuracy by topic and category. The course and
-                      practice work offline after the first successful load.
-                    </p>
-                    <div class="featured-project-links">
-                      <a class="button button-light" href="https://cat-readme-txt.github.io/Math-ter/">Open Math-ter</a>
-                      <a class="text-link" href="https://github.com/cat-readme-txt/Math-ter">Source code</a>
-                    </div>
-                  </div>
-                  <figure class="project-visual project-visual--screenshot">
-                    <a href="https://cat-readme-txt.github.io/Math-ter/#practice/lesson/squares" aria-label="Try the squaring shortcuts practice in Math-ter">
-                      <img src="./assets/math-ter-practice.webp" width="1260" height="910" alt="Math-ter’s Squaring shortcuts practice shows the solution to 25 squared and progress by difficulty, topic, category, and course." loading="lazy" />
-                    </a>
-                    <figcaption class="project-visual-head"><span>Squaring shortcuts</span><span>Practice and feedback</span></figcaption>
-                  </figure>
-                </div>
-                <div class="featured-project-details">
-                  <div>
-                    <h3>71 topics</h3>
-                    <p>Six categories cover mental arithmetic, fractions, algebra, geometry, and introductory
-                      calculus.</p>
-                  </div>
-                  <div>
-                    <h3>3 difficulty levels</h3>
-                    <p>Practice ranges from bounded questions to contest-inspired variants with worked solutions
-                      and archive links.</p>
-                  </div>
-                  <div>
-                    <h3>Offline practice</h3>
-                    <p>A service worker caches the app and the browser keeps per-topic progress locally.</p>
-                  </div>
-                </div>
-                <div class="featured-project-bottom">
-                  <span class="micro-label">Built with</span>
-                  <p>JavaScript / HTML / CSS / service worker / Node.js tests</p>
-                  <a class="text-link" href="https://github.com/cat-readme-txt/Math-ter#sources">Lesson references</a>
-                </div>
-              </article>
-
-              <article id="project-linux-toolkit" class="featured-project featured-project--study featured-project--slate" aria-labelledby="linux-toolkit-title">
-                <div class="featured-project-kicker">
-                  <span class="micro-label">Linux system administration · Bash</span><span>Defensive tooling · 2026</span>
-                </div>
-                <div class="featured-project-main">
-                  <div class="featured-project-copy">
-                    <h2 id="linux-toolkit-title">Linux hardening toolkit<span class="title-period">.</span></h2>
-                    <p class="featured-project-lede">Audit a system, record changes, and roll back selected tasks.</p>
-                    <p class="featured-project-description">
-                      I built a menu-driven toolkit for defensive Linux maintenance. It covers accounts, SSH,
-                      firewalls, services, permissions, and integrity checks. Each run keeps a transcript and
-                      records the state needed for supported rollbacks.
-                    </p>
-                    <div class="featured-project-links">
-                      <a class="button button-light" href="https://github.com/cat-readme-txt/Linux-Security">Source code</a>
-                      <a class="text-link" href="https://github.com/cat-readme-txt/Linux-Security/blob/main/README.md">Usage and rollback guide</a>
-                    </div>
-                  </div>
-                  <figure class="project-visual">
-                    <figcaption class="project-visual-head"><span>Hardening run records</span><span>Bash toolkit</span></figcaption>
-                    <dl class="project-visual-body run-files">
-                      <div>
-                        <dt><code>actions.log</code></dt>
-                        <dd>Machine-readable changes for selective rollback</dd>
-                      </div>
-                      <div>
-                        <dt><code>output.log</code></dt>
-                        <dd>Readable transcript of the run</dd>
-                      </div>
-                      <div>
-                        <dt><code>backups/</code></dt>
-                        <dd>Original copies of edited configuration files</dd>
-                      </div>
-                    </dl>
-                    <p class="project-visual-foot">Each run has a timestamped directory</p>
-                  </figure>
-                </div>
-                <div class="featured-project-details">
-                  <div>
-                    <h3>25 hardening sections</h3>
-                    <p>Read-only checks cover service health and dependencies. Separate tasks apply account,
-                      network, and service changes.</p>
-                  </div>
-                  <div>
-                    <h3>3 distro families</h3>
-                    <p>Package and service handlers support Debian and Ubuntu, RHEL and Fedora, and SUSE families.</p>
-                  </div>
-                  <div>
-                    <h3>Selective rollback</h3>
-                    <p>The companion script uses the action record and backups to restore supported configuration
-                      and state changes.</p>
-                  </div>
-                </div>
-                <div class="featured-project-bottom">
-                  <span class="micro-label">Platform</span>
-                  <p>Bash / systemd / apt, dnf or yum, and zypper</p>
-                  <a class="text-link" href="https://ubuntu.com/server/docs/explanation/security/">Ubuntu security docs</a>
-                </div>
-              </article>
-            </div>
-          </section>
         </div>
       </section>
     </main>
