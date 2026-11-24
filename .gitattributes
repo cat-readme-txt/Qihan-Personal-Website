@@ -1,0 +1,2 @@
+# Preserve the original bytes of imported course PDFs.
+assets/course-materials/**/*.pdf binary

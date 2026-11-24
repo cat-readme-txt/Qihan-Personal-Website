@@ -4,9 +4,12 @@
 ~ClassName();                              				// destructor
 ClassName(const ClassName<T>& other);         			// copy constructor
 ClassName<T>& operator=(const ClassName<T>& other); 	// copy-assignment operator
+// The above three is also named as the Rule of Three
 ClassName(ClassName<T>&& rhs);							// move constructor
 ClassName<T>& operator=(ClassName<T>&& rhs);			// move assignment operator
 ```
+
+See [[The Rule of Three]]
 
 Defining either a destructor, copy constructor, or a copy-assignment operator, the compiler will automatically generate a default for the other two, which will likely not have the intended behavior.
 

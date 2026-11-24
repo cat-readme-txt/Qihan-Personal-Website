@@ -84,79 +84,78 @@
     <main id="main">
       <section
         id="home"
-        class="home section-width"
+        class="home-hero"
         aria-labelledby="home-title"
       >
-        <div class="home-intro">
-          <p class="eyebrow">
-            <span class="small-cross" aria-hidden="true">+</span> Electrical
-            Engineering @ UIUC
-          </p>
-          <h1 id="home-title">
-            Blake Wang<span class="alternate-name">/ Qihan Wang</span>
-          </h1>
-          <p class="home-focus">
-            I design FPGA accelerators, develop CUDA software for simulation and audio,
-            and build embedded sensor interfaces.
-          </p>
-          <div class="home-actions">
-            <a
-              class="button button-primary"
-              href="./assets/qihan-wang-resume.pdf"
-              target="_blank"
-              rel="noopener"
-              >Resume
-              <svg class="icon" aria-hidden="true"><use href="#download" /></svg
-            ></a>
-            <a
-              class="button button-outline"
-              href="https://github.com/cat-readme-txt"
-              target="_blank"
-              rel="noopener noreferrer"
-              >GitHub
-              <svg class="icon" aria-hidden="true">
-                <use href="#arrow-up-right" /></svg
-            ></a>
-            <a
-              class="button button-outline"
-              href="mailto:blakew3@illinois.edu"
-              >Email
-              <svg class="icon" aria-hidden="true">
-                <use href="#arrow-up-right" /></svg
-            ></a>
+        <div class="home section-width">
+          <div class="home-intro">
+            <p class="eyebrow">
+              <span class="small-cross" aria-hidden="true">+</span> Electrical
+              Engineering @ UIUC
+            </p>
+            <h1 id="home-title">
+              Blake Wang<span class="alternate-name">/ Qihan Wang</span>
+            </h1>
+            <p class="home-focus">
+              I design FPGA accelerators, develop CUDA software for simulation and audio,
+              and build embedded sensor interfaces.
+            </p>
+            <div class="home-actions">
+              <a
+                class="button button-primary"
+                href="./assets/qihan-wang-resume.pdf"
+                target="_blank"
+                rel="noopener"
+                >Resume
+                <svg class="icon" aria-hidden="true"><use href="#download" /></svg
+              ></a>
+              <a
+                class="button button-outline"
+                href="https://github.com/cat-readme-txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub
+                <svg class="icon" aria-hidden="true">
+                  <use href="#arrow-up-right" /></svg
+              ></a>
+              <a
+                class="button button-outline"
+                href="mailto:blakew3@illinois.edu"
+                >Email
+                <svg class="icon" aria-hidden="true">
+                  <use href="#arrow-up-right" /></svg
+              ></a>
+            </div>
           </div>
+          <aside class="current-work" aria-labelledby="current-heading">
+            <h2 class="eyebrow" id="current-heading">
+              <span class="status-dot" aria-hidden="true"></span> On my desk
+            </h2>
+            <a class="highlight highlight-link" href="./work.html#ongoing-nuclear">
+              <div>
+                <p class="micro-label">Computational physics</p>
+                <h3>Nuclear pasta <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
+                <p>
+                  FP64 CUDA force calculations and a validated CPU simulation reference.
+                </p>
+              </div>
+            </a>
+            <a class="highlight highlight-link" href="./work.html#ongoing-dissco">
+              <div>
+                <p class="micro-label">Computer music</p>
+                <h3>DISSCO GPU acceleration <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
+                <p>CUDA biquad filtering with CPU fallback for computer music software.</p>
+              </div>
+            </a>
+            <a class="highlight highlight-link" href="./work.html#ongoing-solar-car">
+              <div>
+                <p class="micro-label">Embedded systems</p>
+                <h3>Illini Solar Car <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
+                <p>HIL sensor emulation, PCB review, and Zephyr integration work.</p>
+              </div>
+            </a>
+          </aside>
         </div>
-        <aside class="current-work" aria-labelledby="current-heading">
-          <h2 class="eyebrow" id="current-heading">
-            <span class="status-dot" aria-hidden="true"></span> On my desk
-          </h2>
-          <a class="highlight highlight-link" href="./work.html#ongoing-nuclear">
-            <span class="highlight-number" aria-hidden="true">01</span>
-            <div>
-              <p class="micro-label">Computational physics</p>
-              <h3>Nuclear pasta <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
-              <p>
-                FP64 CUDA force calculations and a validated CPU simulation reference.
-              </p>
-            </div>
-          </a>
-          <a class="highlight highlight-link" href="./work.html#ongoing-dissco">
-            <span class="highlight-number" aria-hidden="true">02</span>
-            <div>
-              <p class="micro-label">Computer music</p>
-              <h3>DISSCO GPU acceleration <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
-              <p>CUDA biquad filtering with CPU fallback for computer music software.</p>
-            </div>
-          </a>
-          <a class="highlight highlight-link" href="./work.html#ongoing-solar-car">
-            <span class="highlight-number" aria-hidden="true">03</span>
-            <div>
-              <p class="micro-label">Embedded systems</p>
-              <h3>Illini Solar Car <svg class="icon" aria-hidden="true"><use href="#arrow-right" /></svg></h3>
-              <p>HIL sensor emulation, PCB review, and Zephyr integration work.</p>
-            </div>
-          </a>
-        </aside>
       </section>
 
       <section class="home-projects" aria-labelledby="home-projects-heading">
@@ -170,18 +169,21 @@
               <p class="micro-label">Quantum error correction</p>
               <h3><a href="./projects.html#project-quantum-decoder">ML-assisted quantum decoder</a></h3>
               <p class="home-project-result">43% fewer failed pairs</p>
+              <div class="home-project-comparison" style="--result-width: 56.7%" aria-hidden="true"><span></span><span></span></div>
               <p>845 to 479 out of 10,000 simulated pairs versus full Relay-BP at <i>p</i> = 0.005.</p>
             </article>
             <article>
               <p class="micro-label">Digital hardware</p>
               <h3><a href="./projects.html#project-fpga">Pipelined INT8 accelerator</a></h3>
               <p class="home-project-result">9 cycles to 1</p>
+              <div class="home-project-comparison" style="--result-width: 11.1%" aria-hidden="true"><span></span><span></span></div>
               <p>Cycles between inputs for the serial baseline and the pipeline with no stalls.</p>
             </article>
             <article>
               <p class="micro-label">IBM Quantum hardware</p>
               <h3><a href="./projects.html#project-parity-checks">Repeated parity checks</a></h3>
               <p class="home-project-result">70 failures to 48</p>
+              <div class="home-project-comparison" style="--result-width: 68.6%" aria-hidden="true"><span></span><span></span></div>
               <p>Per 512 shots after four rounds, comparing the original circuit with fast readout for encoded 1.</p>
             </article>
           </div>
