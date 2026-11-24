@@ -116,20 +116,20 @@
               <p class="eyebrow">Nov. 2026–present · Professor Sever Tipei · UIUC</p>
               <h3 id="dissco-heading">DISSCO / LASS CUDA filtering</h3>
               <p>Recursive IIR filters carry state between samples, so I split sound-level biquad filtering into 256-sample chunks. Affine state summaries propagate each chunk’s boundary state before parallel evaluation on the GPU.</p>
-              <p>The optional CUDA build adds GPU selection, asynchronous transfers, RAII resource handling, and automatic CPU fallback. This work supports DISSCO’s larger additive-synthesis rendering path.</p>
-              <a class="text-link" href="https://github.com/cmp-illinois/DISSCO" target="_blank" rel="noopener noreferrer">DISSCO source <svg class="icon" aria-hidden="true"><use href="#arrow-up-right" /></svg></a>
+              <p>The optional CUDA build adds GPU selection, asynchronous transfers, RAII resource handling, and automatic CPU fallback. The correctness test checks the GPU filter against the CPU recurrence, including independent channels.</p>
+              <a class="text-link" href="https://github.com/cmp-illinois/DISSCO/tree/CUDA/LASS/CUDA" target="_blank" rel="noopener noreferrer">CUDA source and benchmark setup</a>
             </div>
             <div class="work-story-aside work-story-aside--diagram" aria-label="Biquad filter pipeline">
               <p class="micro-label">Filter path</p>
               <ol class="method-flow"><li><span>01</span> Split into 256-sample chunks</li><li><span>02</span> Propagate boundary states</li><li><span>03</span> Evaluate chunks in parallel</li><li><span>04</span> Fall back to CPU when needed</li></ol>
               <div class="work-filter-result">
-                <p class="micro-label">NCSA Delta · 32 seconds of stereo audio</p>
+                <p class="micro-label">Recorded NCSA Delta benchmark · Nov. 10, 2026</p>
                 <p><strong>31.94 to 8.71 ms</strong></p>
-                <p>CPU to CUDA for the filter alone · 3.67× speedup</p>
+                <p>CPU to CUDA median times for a 32-second stereo biquad filter · 3.67× speedup</p>
               </div>
               <p class="work-aside-note">
-                Filter output was checked against the CPU recurrence and multichannel API. In the same timing run,
-                an 8-second, four-channel render with eight partials took 306.63 ms on CPU and 307.55 ms with CUDA filtering.
+                The same comparison’s synthetic LASS render used eight seconds of four-channel audio, eight partials,
+                and disabled loudness and reverb. It took 306.63 ms with CPU filtering and 307.55 ms with CUDA filtering.
               </p>
             </div>
           </article>
